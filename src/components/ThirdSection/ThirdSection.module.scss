@@ -1,0 +1,59 @@
+@import "/src/styles/theme";
+@import "/src/styles/typography";
+
+.container {
+  background: white;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 5rem;
+
+  .wedge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .mainSection {
+    padding-right: 2rem;
+    display: flex;
+    gap: 3rem;
+    width: calc(100vw - 10%);
+
+    .leftSection {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 60%;
+
+      .titleText {
+        @extend .title;
+        color: black;
+      }
+
+      .descriptionText {
+        @extend .description;
+        color: black;
+      }
+    }
+
+    .rightSection {
+      width: 40%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    .brochureButton {
+      border-radius: 0;
+      border-color: white;
+      background-color: $primaryColor;
+      color: white;
+      width: fit-content;
+    }
+  }
+}

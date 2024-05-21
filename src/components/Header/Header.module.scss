@@ -1,0 +1,66 @@
+@import "/src/styles/theme";
+@import "/src/styles/typography";
+
+.container {
+  padding: 0 5rem;
+  height: 9.125rem;
+  background: $primaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .menuSection {
+      ul {
+        display: flex;
+        gap: 1rem;
+
+        li {
+          list-style-type: none;
+          @extend .header-bold;
+        }
+      }
+    }
+
+    .langSection {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: white;
+      color: $primaryColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    .downloadSection {
+      .brochureButton {
+        color: white;
+        border-color: white;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.subContainer {
+  padding: 0 5rem;
+  height: 3.125rem;
+  background: $secondaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+
+  .subMenuButton {
+    text-transform: none;
+    color: $primaryColor;
+    @extend .header;
+  }
+}
