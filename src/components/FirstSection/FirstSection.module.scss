@@ -16,6 +16,14 @@
     right: 0;
   }
 
+  .brochureButton {
+    border-radius: 0;
+    border-color: white;
+    background-color: $primaryColor;
+    color: white;
+    width: fit-content;
+  }
+
   .mainSection {
     padding-right: 2rem;
     display: flex;
@@ -34,14 +42,10 @@
       @extend .description;
       color: black;
     }
+  }
 
-    .brochureButton {
-      border-radius: 0;
-      border-color: white;
-      background-color: $primaryColor;
-      color: white;
-      width: fit-content;
-    }
+  .mainSectionRight {
+    @extend .mainSection;
 
     .carouselImage {
       width: 100%;

@@ -3,7 +3,8 @@ import styles from "./FirstSection.module.scss";
 import Wedge from "@/assets/wedge.svg";
 import { Button } from "@mui/material";
 import Slider from "react-slick";
-import generator from "@/assets/Generator.png";
+import machine from "@/assets/firstSectionMachine.png";
+import compactor from "@/assets/compactor.gif";
 
 function CarouselNextArrow(props: any) {
   const { className, style, onClick } = props;
@@ -71,11 +72,11 @@ const FirstSection = () => {
           Download Brochure
         </Button>
       </div>
-      <div className={styles.mainSection}>
+      <div className={styles.mainSectionRight}>
         <Slider {...settings}>
           <div>
             <Image
-              src={generator}
+              src={compactor}
               alt="Generator Image"
               className={styles.carouselImage}
             />
@@ -95,7 +96,7 @@ const FirstSection = () => {
           </div>
           <div>
             <Image
-              src={generator}
+              src={machine}
               alt="Generator Image"
               className={styles.carouselImage}
             />

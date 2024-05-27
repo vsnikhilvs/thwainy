@@ -1,10 +1,34 @@
+"use client";
+
 import Image from "next/image";
 import Logo from "@/assets/Logo.svg";
 import styles from "./Header.module.scss";
 import Link from "next/link";
-import { Button } from "@mui/material";
+import {
+  Button,
+  Fade,
+  Paper,
+  Popper,
+  PopperPlacementType,
+  Typography,
+} from "@mui/material";
+import { usePathname } from "next/navigation";
+import React from "react";
 
 const Header = () => {
+  const pathname = usePathname();
+  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
+    null
+  );
+  const [open, setOpen] = React.useState(false);
+  const [placement, setPlacement] = React.useState<PopperPlacementType>();
+  const handleClick =
+    (newPlacement: PopperPlacementType) =>
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(event.currentTarget);
+      setOpen((prev) => placement !== newPlacement || !prev);
+      setPlacement(newPlacement);
+    };
   return (
     <>
       <div className={styles.container}>
@@ -13,19 +37,62 @@ const Header = () => {
           <div className={styles.menuSection}>
             <ul>
               <li>
-                <Link href="/">Home</Link>
+                <Link
+                  href="/"
+                  className={
+                    pathname === "/" ? styles.activeMenu : styles.inActiveMenu
+                  }
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/">About</Link>
+                <Link
+                  href="/about"
+                  className={
+                    pathname === "/about"
+                      ? styles.activeMenu
+                      : styles.inActiveMenu
+                  }
+                >
+                  About
+                </Link>
               </li>
               <li>
-                <Link href="/">Products</Link>
+                <Link
+                  href="/products"
+                  className={
+                    pathname === "/products"
+                      ? styles.activeMenu
+                      : styles.inActiveMenu
+                  }
+                >
+                  Products
+                </Link>
               </li>
               <li>
-                <Link href="/">News</Link>
+                <Link
+                  href="/"
+                  className={
+                    pathname === "/news"
+                      ? styles.activeMenu
+                      : styles.inActiveMenu
+                  }
+                >
+                  News
+                </Link>
               </li>
               <li>
-                <Link href="/">Contact Us</Link>
+                <Link
+                  href="/contact"
+                  className={
+                    pathname === "/contact"
+                      ? styles.activeMenu
+                      : styles.inActiveMenu
+                  }
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -40,16 +107,52 @@ const Header = () => {
         </div>
       </div>
       <div className={styles.subContainer}>
-        <Button variant="text" className={styles.subMenuButton}>
+        <Button
+          variant="text"
+          className={styles.subMenuButton}
+          onClick={handleClick("bottom")}
+        >
           Power
         </Button>
-        <Button variant="text" className={styles.subMenuButton}>
+        <Button
+          variant="text"
+          className={styles.subMenuButton}
+          onClick={handleClick("bottom")}
+        >
           City Cleaning
         </Button>
-        <Button variant="text" className={styles.subMenuButton}>
+        <Button
+          variant="text"
+          className={styles.subMenuButton}
+          onClick={handleClick("bottom")}
+        >
           Maintenance & Construction
         </Button>
       </div>
+      <Popper
+        // Note: The following zIndex style is specifically for documentation purposes and may not be necessary in your application.
+        sx={{ zIndex: 1200 }}
+        open={open}
+        anchorEl={anchorEl}
+        placement={placement}
+        transition
+      >
+        {({ TransitionProps }) => (
+          <Fade {...TransitionProps} timeout={350}>
+            <div className={styles.popupButtons}>
+              <Button variant="text" className={styles.subMenuPopupButton}>
+                Diesel Generator
+              </Button>
+              <Button variant="text" className={styles.subMenuPopupButton}>
+                Stationary Screw Compressor
+              </Button>
+              <Button variant="text" className={styles.subMenuPopupButton}>
+                Portable Screw Compressor
+              </Button>
+            </div>
+          </Fade>
+        )}
+      </Popper>
     </>
   );
 };

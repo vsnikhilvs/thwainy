@@ -15,14 +15,22 @@
     align-items: center;
     justify-content: space-between;
 
+    .activeMenu {
+      @extend .header-bold;
+    }
+
+    .inActiveMenu {
+      @extend .header;
+    }
+
     .menuSection {
       ul {
         display: flex;
+        align-items: center;
         gap: 1rem;
 
         li {
           list-style-type: none;
-          @extend .header-bold;
         }
       }
     }
@@ -62,5 +70,21 @@
     text-transform: none;
     color: $primaryColor;
     @extend .header;
+  }
+}
+
+.popupButtons {
+  background: $secondaryColor;
+  margin-top: 0.5rem;
+
+  .subMenuPopupButton {
+    text-transform: none;
+    color: $primaryColor;
+    @extend .header;
+
+    &:hover {
+      background: #5a5d5e;
+      color: white;
+    }
   }
 }

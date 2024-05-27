@@ -102,3 +102,30 @@ a {
     color-scheme: dark;
   }
 }
+
+.slick-next:before,
+.slick-prev:before {
+  color: #575757 !important;
+}
+
+.MuiInputLabel-outlined {
+  color: #223a5c !important;
+}
+
+.MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #223a5c !important;
+}
+
+.MuiInputBase-root-MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #00aeef !important;
+}
+
+.MuiTab-textColorPrimary {
+  color: #656e7b !important;
+}
+
+.MuiTab-textColorPrimary.Mui-selected {
+  color: #223a5c !important;
+}

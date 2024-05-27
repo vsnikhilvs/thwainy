@@ -3,7 +3,7 @@ import styles from "./SecondSection.module.scss";
 import Wedge from "@/assets/wedge.svg";
 import { Button } from "@mui/material";
 import Slider from "react-slick";
-import bunded from "@/assets/bunded.png";
+import bunded from "@/assets/bunded.svg";
 
 function CarouselNextArrow(props: any) {
   const { className, style, onClick } = props;
@@ -13,7 +13,7 @@ function CarouselNextArrow(props: any) {
       style={{
         ...style,
         display: "block",
-        background: "#a7a7a7",
+        background: "#ffffff",
         borderRadius: "50%",
       }}
       onClick={onClick}
@@ -66,8 +66,8 @@ const SecondSection = () => {
           <div className={styles.carouselItem}>
             <div className={styles.carouselImage}>
               <Image
-                // width={150}
-                // height={150}
+                width={450}
+                height={450}
                 src={bunded}
                 alt="Generator Image"
                 style={{ objectFit: "cover" }}
@@ -120,8 +120,8 @@ const SecondSection = () => {
           <div className={styles.carouselItem}>
             <div className={styles.carouselImage}>
               <Image
-                // width={150}
-                // height={150}
+                width={450}
+                height={450}
                 src={bunded}
                 alt="Generator Image"
               />

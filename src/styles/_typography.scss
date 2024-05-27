@@ -10,6 +10,12 @@
   line-height: 24.2px;
 }
 
+.header-bold-medium {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.63px;
+}
+
 .title {
   font-size: 54px;
   font-weight: 400;
@@ -19,6 +25,12 @@
 .description {
   font-size: 28px;
   font-weight: 400;
+  line-height: 33.89px;
+}
+
+.machineFeatureTitle {
+  font-size: 28px;
+  font-weight: 600;
   line-height: 33.89px;
 }
 
@@ -56,4 +68,16 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 29.05px;
+}
+
+.footerTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30.53px;
+}
+
+.footerDescription {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30.53px;
 }
