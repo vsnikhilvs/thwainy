@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: "/nextjs-github-pages",
+  basePath: "/thwainy",
   output: "export",
   images: {
     unoptimized: true,

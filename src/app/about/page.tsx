@@ -19,7 +19,7 @@ const About = () => {
           </div>
           <div className={styles.mainSectionRight}>
             <Image
-              src={generator}
+              src={"/thwainy/generator.png"}
               alt="Generator Image"
               className={styles.carouselImage}
             />

@@ -10,7 +10,7 @@ const Contact = () => {
     <Layout>
       <div className={styles.container}>
         <Image
-          src={banner}
+          src={"/thwainy/banner.png"}
           alt={"Banner Image"}
           className={styles.bannerImage}
         />
