@@ -3,7 +3,7 @@ import styles from "./About.module.scss";
 import Image from "next/image";
 import { Button } from "@mui/material";
 import generator from "@/assets/generator.png";
-import { constants } from "./constants";
+import { constants } from "@/constants/about/constants";
 
 const About = () => {
   return (

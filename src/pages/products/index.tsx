@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout/Layout";
 import styles from "./Products.module.scss";
-import { constants } from "./constants";
+import { constants } from "@/constants/products/constants";
 import { useState } from "react";
 import { Tabs, Tab, Button } from "@mui/material";
 import Image from "next/image";

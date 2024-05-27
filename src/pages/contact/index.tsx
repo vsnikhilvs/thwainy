@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Contact.module.scss";
-import { constants } from "./constants";
+import { constants } from "@/constants/contact/constants";
 import banner from "@/assets/banner.png";
 import { Button, TextField } from "@mui/material";
 import Layout from "@/components/Layout/Layout";
