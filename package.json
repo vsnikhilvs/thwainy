@@ -2,14 +2,11 @@
   "name": "thwainy_tech",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://vsnikhilvs.github.io/thwainy",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
