@@ -1,3 +1,5 @@
+"use client";
+
 import Layout from "@/components/Layout/Layout";
 import styles from "./Products.module.scss";
 import { constants } from "@/constants/products/constants";
