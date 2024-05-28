@@ -2,62 +2,9 @@ import Image from "next/image";
 import styles from "./SecondSection.module.scss";
 import Wedge from "@/assets/wedge.svg";
 import { Button } from "@mui/material";
-import Slider from "react-slick";
 import bunded from "@/assets/bunded.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-function CarouselNextArrow(props: any) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        background: "#ffffff",
-        borderRadius: "50%",
-      }}
-      onClick={onClick}
-    />
-  );
-}
-const settings = {
-  dots: true,
-  infinite: true,
-  centerMode: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  prevArrow: <CarouselNextArrow />,
-  nextArrow: <CarouselNextArrow />,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
 
 const SecondSection = () => {
   return (
