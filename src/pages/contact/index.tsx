@@ -1,11 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./Contact.module.scss";
 import { constants } from "@/constants/contact/constants";
 import banner from "@/assets/banner.png";
 import { Button, TextField } from "@mui/material";
 import Layout from "@/components/Layout/Layout";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
+  const [windowWidth, setWindowWidth] = useState(undefined);
+  useEffect(() => {
+    setWindowWidth((window as any).innerWidth);
+  }, []);
   return (
     <Layout>
       <div className={styles.container}>
@@ -13,6 +20,7 @@ const Contact = () => {
           src={banner}
           alt={"Banner Image"}
           className={styles.bannerImage}
+          width={windowWidth}
         />
         <div className={styles.content}>
           <span className={styles.title}>{constants.title}</span>

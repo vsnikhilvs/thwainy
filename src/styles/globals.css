@@ -129,3 +129,19 @@ a {
 .MuiTab-textColorPrimary.Mui-selected {
   color: #223a5c !important;
 }
+
+@media only screen and (min-width: 640px) {
+  .slick-current {
+    width: 20% !important;
+  }
+}
+
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+  min-width: 25px !important;
+  min-height: 25px !important;
+}
+
+.react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+  min-width: 25px !important;
+  min-height: 25px !important;
+}

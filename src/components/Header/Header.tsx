@@ -10,7 +10,6 @@ import {
   Paper,
   Popper,
   PopperPlacementType,
-  Typography,
 } from "@mui/material";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -32,7 +31,7 @@ const Header = () => {
   return (
     <>
       <div className={styles.container}>
-        <Image src={Logo} alt={"Logo"} />
+        <Image src={Logo} alt={"Logo"} className={styles.logo} />
         <div className={styles.menu}>
           <div className={styles.menuSection}>
             <ul>

@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={styles.footerSection}>
       <div className={styles.smallRectangle}></div>
       <div className={styles.footerContent}>
-        <Image src={Logo} alt={"Logo"} />
+        <Image src={Logo} alt={"Logo"} className={styles.logo} />
         <div className={styles.addressSection}>
           <span className={styles.addressTitle}>Address</span>
           <span className={styles.addressDesc}>Thwainy Industries</span>
@@ -26,25 +26,7 @@ const Footer = () => {
           <span className={styles.addressDesc}>info@thwainy.com</span>
         </div>
       </div>
-      <div className={styles.menuContent}>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/">About</Link>
-          </li>
-          <li>
-            <Link href="/">Products</Link>
-          </li>
-          <li>
-            <Link href="/">News</Link>
-          </li>
-          <li>
-            <Link href="/">Contact Us</Link>
-          </li>
-        </ul>
-      </div>
+      <div className={styles.menuContent}>© All rights reserved</div>
     </div>
   );
 };

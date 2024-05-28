@@ -2,60 +2,9 @@ import Image from "next/image";
 import styles from "./FirstSection.module.scss";
 import Wedge from "@/assets/wedge.svg";
 import { Button } from "@mui/material";
-import Slider from "react-slick";
-import machine from "@/assets/firstSectionMachine.png";
 import compactor from "@/assets/compactor.gif";
-
-function CarouselNextArrow(props: any) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        background: "#a7a7a7",
-        borderRadius: "50%",
-      }}
-      onClick={onClick}
-    />
-  );
-}
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  prevArrow: <CarouselNextArrow />,
-  nextArrow: <CarouselNextArrow />,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+import Carousel from "react-multi-carousel";
+import 'react-multi-carousel/lib/styles.css';
 
 const FirstSection = () => {
   return (
@@ -73,8 +22,60 @@ const FirstSection = () => {
         </Button>
       </div>
       <div className={styles.mainSectionRight}>
-        <Slider {...settings}>
-          <div>
+        <Carousel
+          additionalTransfrom={0}
+          arrows
+          autoPlaySpeed={3000}
+          centerMode={false}
+          className=""
+          containerClass="container-with-dots"
+          dotListClass=""
+          draggable
+          focusOnSelect={false}
+          infinite
+          itemClass=""
+          keyBoardControl
+          minimumTouchDrag={80}
+          pauseOnHover
+          renderArrowsWhenDisabled={false}
+          renderButtonGroupOutside={true}
+          renderDotsOutside={false}
+          responsive={{
+            desktop: {
+              breakpoint: {
+                max: 3000,
+                min: 640,
+              },
+              items: 1,
+              partialVisibilityGutter: 40,
+            },
+            mobile: {
+              breakpoint: {
+                max: 639,
+                min: 0,
+              },
+              items: 1,
+              partialVisibilityGutter: 30,
+            },
+            tablet: {
+              breakpoint: {
+                max: 1024,
+                min: 480,
+              },
+              items: 1,
+              partialVisibilityGutter: 30,
+            },
+          }}
+          rewind={false}
+          rewindWithAnimation={false}
+          rtl={false}
+          shouldResetAutoplay
+          showDots={false}
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+        >
+          <div className={styles.slickItem}>
             <Image
               src={compactor}
               alt="Generator Image"
@@ -94,26 +95,27 @@ const FirstSection = () => {
               </Button>
             </div>
           </div>
-          <div>
+          <div className={styles.slickItem}>
             <Image
-              src={machine}
+              src={compactor}
               alt="Generator Image"
               className={styles.carouselImage}
             />
+            <div className={styles.carouselContent}>
+              <span className={styles.carouselTitle}>
+                Generators and Canopies
+              </span>
+              <span className={styles.carouselDescription}>
+                Introducing our versatile generator solutions, available for
+                both rental and sale, providing you with flexibility and
+                convenience
+              </span>
+              <Button variant="contained" className={styles.brochureButton}>
+                Know More
+              </Button>
+            </div>
           </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
+        </Carousel>
       </div>
     </div>
   );

@@ -1,11 +1,13 @@
 @import "/src/styles/theme";
 @import "/src/styles/typography";
+@import "/src/styles/breakpoints";
 
 .container {
   background: white;
   height: calc(100vh - 12.25rem);
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -25,10 +27,8 @@
   }
 
   .mainSection {
-    padding-right: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     min-width: 5rem;
     max-width: 35rem;
     width: 100%;
@@ -36,19 +36,35 @@
     .titleText {
       @extend .title;
       color: black;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 35px;
     }
 
     .descriptionText {
       @extend .description;
+      font-size: 22px;
       color: black;
     }
   }
 
   .mainSectionRight {
-    @extend .mainSection;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 5rem;
+    max-width: 35rem;
+    width: 100%;
+
+    .slickItem {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
 
     .carouselImage {
-      width: 100%;
+      width: 250px;
       height: 100%;
       object-fit: cover;
     }
@@ -57,15 +73,129 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      width: 15rem;
 
       .carouselTitle {
         @extend .carouseltitle;
         color: black;
+        font-size: 24px;
+        line-height: 28px;
       }
 
       .carouselDescription {
         @extend .carouseldescription;
         color: black;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@include md {
+  .container {
+    gap: 5rem;
+    .mainSection {
+      max-width: 35rem;
+    }
+    .mainSectionRight {
+      max-width: 45rem;
+      .carouselContent {
+        width: 22rem;
+      }
+    }
+  }
+}
+
+@include lg {
+  .container {
+    gap: 2rem;
+    padding: 0 4rem;
+    flex-direction: row;
+    .mainSection {
+      max-width: 20rem;
+      gap: 1rem;
+      .titleText {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+    .mainSectionRight {
+      .carouselImage {
+        width: 350px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .slickItem {
+        flex-direction: column;
+      }
+      .carouselContent {
+        width: 25rem;
+        .carouselDescription {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@include xl {
+  .container {
+    flex-direction: row;
+    .mainSection {
+      max-width: 25rem;
+      .titleText {
+        font-size: 45px;
+        line-height: 40px;
+      }
+    }
+    .mainSectionRight {
+      .carouselImage {
+        width: 500px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .carouselContent {
+        width: 35rem;
+        .carouselTitle {
+          font-size: 30px;
+        }
+        .carouselDescription {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@include xxl {
+  .container {
+    .mainSection {
+      max-width: 50rem;
+      .titleText {
+        font-size: 54px;
+        line-height: 54px;
+      }
+      .descriptionText {
+        font-size: 40px;
+      }
+    }
+    .mainSectionRight {
+      max-width: 50rem;
+      .carouselImage {
+        width: 750px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .carouselContent {
+        width: 45rem;
+        .carouselTitle {
+          font-size: 40px;
+        }
+        .carouselDescription {
+          font-size: 25px;
+          line-height: 32px;
+        }
       }
     }
   }

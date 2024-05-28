@@ -34,7 +34,12 @@ const ThirdSection = () => {
         </div>
         <div className={styles.rightSection}>
           {images.map((i, index) => (
-            <Image key={index} src={i} alt="Image" />
+            <Image
+              key={index}
+              src={i}
+              alt="Image"
+              className={styles.carouselImage}
+            />
           ))}
         </div>
       </div>

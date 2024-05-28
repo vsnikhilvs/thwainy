@@ -1,10 +1,16 @@
 @import "/src/styles/theme";
 @import "/src/styles/typography";
+@import "/src/styles/breakpoints";
 
 .footerSection {
   background: white;
   width: 100%;
   height: 15rem;
+
+  .logo {
+    width: 75px;
+    height: 75px;
+  }
 
   .smallRectangle {
     height: 5%;
@@ -12,21 +18,25 @@
   }
 
   .footerContent {
-    padding: 0 4rem;
+    padding: 0 2rem;
     background: $primaryColor;
     height: 75%;
     display: flex;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between;
 
     .addressTitle {
       @extend .footerTitle;
       color: white;
+      font-size: 16px;
     }
 
     .addressDesc {
       @extend .footerDescription;
       color: white;
+      font-size: 12px;
+      line-height: 20px;
     }
 
     .addressSection {
@@ -46,17 +56,63 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
     color: white;
+  }
+}
 
-    ul {
-      display: flex;
-      gap: 1rem;
-
-      li {
-        list-style-type: none;
-        @extend .header;
+@include md {
+  .footerSection {
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+    .footerContent {
+      .addressTitle {
+        font-size: 18px;
       }
+      .addressDesc {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include xl {
+  .footerSection {
+    .logo {
+      width: 200px;
+      height: 200px;
+    }
+    .footerContent {
+      padding: 0 4rem;
+      .addressTitle {
+        font-size: 20px;
+      }
+      .addressDesc {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include xxl {
+  .footerSection {
+    .footerContent {
+      .addressTitle {
+        font-size: 24px;
+      }
+      .addressDesc {
+        font-size: 20px;
+      }
+      .addressSection {
+        gap: 1rem;
+      }
+      .contactSection {
+        gap: 1rem;
+      }
+    }
+    .menuContent {
+      font-size: 20px;
     }
   }
 }

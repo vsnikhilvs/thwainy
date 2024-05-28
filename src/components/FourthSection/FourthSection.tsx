@@ -11,7 +11,11 @@ const FourthSection = () => {
           <div className={styles.features}>
             {features.map((f, index) => (
               <div key={index} className={styles.featureItem}>
-                <Image src={f.logo} width={100} height={100} alt={"Logo"} />
+                <Image
+                  src={f.logo}
+                  className={styles.featureImage}
+                  alt={"Logo"}
+                />
                 <div className={styles.featureLiterals}>
                   <span className={styles.ftTitle}>{f.title}</span>
                   <span className={styles.ftDescription}>{f.description}</span>

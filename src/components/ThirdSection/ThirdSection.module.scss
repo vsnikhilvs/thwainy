@@ -1,5 +1,6 @@
 @import "/src/styles/theme";
 @import "/src/styles/typography";
+@import "/src/styles/breakpoints";
 
 .container {
   background: white;
@@ -9,7 +10,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 0 5rem;
+  padding: 0 2rem;
 
   .wedge {
     position: absolute;
@@ -33,19 +34,30 @@
       .titleText {
         @extend .title;
         color: black;
+        font-size: 35px;
+        line-height: 38px;
       }
 
       .descriptionText {
         @extend .description;
         color: black;
+        font-size: 16px;
+        line-height: 18px;
       }
     }
 
     .rightSection {
       width: 40%;
       display: flex;
+      align-items: center;
+      flex-direction: column;
       flex-wrap: wrap;
       gap: 3rem;
+
+      .carouselImage {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     .brochureButton {
@@ -54,6 +66,78 @@
       background-color: $primaryColor;
       color: white;
       width: fit-content;
+    }
+  }
+}
+
+@include md {
+  .container {
+    .mainSection {
+      gap: 0rem;
+      .leftSection {
+        .titleText {
+          font-size: 40px;
+        }
+        .descriptionText {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@include lg {
+  .container {
+    .mainSection {
+      gap: 0rem;
+      .leftSection {
+        .titleText {
+          font-size: 45px;
+          line-height: 45px;
+        }
+        .descriptionText {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+      .rightSection {
+        .carouselImage {
+          width: 75px;
+          height: 75px;
+        }
+      }
+    }
+  }
+}
+
+@include xl {
+  .container {
+    padding: 0 4rem;
+    .mainSection {
+      gap: 3rem;
+      .leftSection {
+        .titleText {
+          font-size: 45px;
+          line-height: 45px;
+        }
+        .descriptionText {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+      .rightSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        .carouselImage {
+          width: 100px;
+          height: 100px;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,213 @@
+@import "/src/styles/theme";
+@import "/src/styles/typography";
+@import "/src/styles/breakpoints";
+
+.container {
+  min-height: 85vh;
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+
+    .brochureButton {
+      border-radius: 0;
+      border-color: white;
+      background-color: $primaryColor;
+      color: white;
+      width: fit-content;
+    }
+
+    .mainSection {
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 5rem;
+      max-width: 35rem;
+      width: 100%;
+
+      .titleText {
+        @extend .title;
+        color: black;
+        font-size: 28px;
+        line-height: 35px;
+      }
+
+      .descriptionText {
+        @extend .description;
+        color: black;
+        font-size: 20px;
+      }
+    }
+
+    .mainSectionRight {
+      @extend .mainSection;
+
+      .carouselImage {
+        width: 300px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .featureSection {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .normal {
+      flex-direction: row;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .carouselImage {
+        width: 200px;
+        height: 200px;
+      }
+
+      .featureContent {
+        @extend .carouseldescription;
+        color: black;
+        text-align: justify;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+@include sm {
+  .container {
+    .main {
+      .mainSectionRight {
+        .carouselImage {
+          width: 300px;
+        }
+      }
+    }
+    .featureSection {
+      .feature {
+        .featureContent {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .container {
+    .main {
+      .mainSectionRight {
+        .carouselImage {
+          width: 400px;
+        }
+      }
+    }
+    .featureSection {
+      .feature {
+        .carouselImage {
+          width: 300px;
+          height: 300px;
+        }
+        .featureContent {
+          font-size: 16px;
+          line-height: 23px;
+        }
+      }
+    }
+  }
+}
+
+@include lg {
+  .container {
+    .main {
+      .mainSectionRight {
+        .carouselImage {
+          width: 500px;
+        }
+      }
+    }
+    .featureSection {
+      .feature {
+        .featureContent {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+
+@include xl {
+  .container {
+    .main {
+      .mainSection {
+        .titleText {
+          font-size: 35px;
+        }
+        .descriptionText {
+          font-size: 28px;
+        }
+      }
+      .mainSectionRight {
+        .carouselImage {
+          width: 600px;
+        }
+      }
+    }
+    .featureSection {
+      padding: 2rem 4rem;
+      .feature {
+        .featureContent {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+
+@include xxl {
+  .container {
+    .main {
+      .brochureButton {
+        font-size: 22px;
+      }
+      .mainSection {
+        .titleText {
+          font-size: 45px;
+        }
+        .descriptionText {
+          font-size: 32px;
+        }
+      }
+      .mainSectionRight {
+        .carouselImage {
+          width: 900px;
+        }
+      }
+    }
+    .featureSection {
+      padding: 2rem 4rem;
+      .feature {
+        .featureContent {
+          font-size: 28px;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+}
