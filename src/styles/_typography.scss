@@ -1,11 +1,13 @@
+@import "./breakpoints";
+
 .header {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 24.2px;
 }
 
 .header-bold {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 24.2px;
 }
@@ -17,67 +19,78 @@
 }
 
 .title {
-  font-size: 54px;
+  font-size: 30px;
   font-weight: 400;
-  line-height: 65.35px;
+  line-height: 36.31px;
+  @media (min-width: #{$screen-lg-min}) {
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 60.94px;
+  }
 }
 
 .description {
-  font-size: 28px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 33.89px;
-}
-
-.machineFeatureTitle {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 33.89px;
+  line-height: 16.94px;
+  @media (min-width: #{$screen-lg-min}) {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.13px;
+  }
 }
 
 .subtitle {
-  font-size: 20.5px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 24.81px;
+  line-height: 18.15px;
+  @media (min-width: #{$screen-lg-min}) {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 30.47px;
+  }
 }
 
 .subdescription {
-  font-size: 17.09px;
+  font-size: 10px;
   font-weight: 400;
-  line-height: 20.68px;
+  line-height: 12.1px;
+  @media (min-width: #{$screen-lg-min}) {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20.03px;
+  }
 }
 
 .carouseltitle {
-  font-size: 39.06px;
-  font-weight: 400;
-  line-height: 47.27px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23.44px;
+  @media (min-width: #{$screen-lg-min}) {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 42.19px;
+  }
 }
 
 .carouseldescription {
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26.63px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.41px;
+  @media (min-width: #{$screen-lg-min}) {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.13px;
+  }
 }
 
 .featureTitle {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 33.89px;
-}
-
-.featureDescription {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 29.05px;
-}
-
-.footerTitle {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30.53px;
-}
-
-.footerDescription {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 30.53px;
+  line-height: 12.89px;
+  @media (min-width: #{$screen-lg-min}) {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 33.89px;
+  }
 }

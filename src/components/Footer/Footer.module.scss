@@ -27,16 +27,15 @@
     justify-content: space-between;
 
     .addressTitle {
-      @extend .footerTitle;
+      @extend .carouseltitle;
       color: white;
-      font-size: 16px;
+      font-size: 26px;
     }
 
     .addressDesc {
-      @extend .footerDescription;
+      @extend .carouseldescription;
       color: white;
-      font-size: 12px;
-      line-height: 20px;
+      font-size: 14px;
     }
 
     .addressSection {
@@ -66,14 +65,6 @@
       width: 100px;
       height: 100px;
     }
-    .footerContent {
-      .addressTitle {
-        font-size: 18px;
-      }
-      .addressDesc {
-        font-size: 14px;
-      }
-    }
   }
 }
 
@@ -85,12 +76,6 @@
     }
     .footerContent {
       padding: 0 4rem;
-      .addressTitle {
-        font-size: 20px;
-      }
-      .addressDesc {
-        font-size: 16px;
-      }
     }
   }
 }
@@ -98,21 +83,12 @@
 @include xxl {
   .footerSection {
     .footerContent {
-      .addressTitle {
-        font-size: 24px;
-      }
-      .addressDesc {
-        font-size: 20px;
-      }
       .addressSection {
         gap: 1rem;
       }
       .contactSection {
         gap: 1rem;
       }
-    }
-    .menuContent {
-      font-size: 20px;
     }
   }
 }

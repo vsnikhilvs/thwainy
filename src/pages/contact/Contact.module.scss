@@ -77,8 +77,6 @@
     .contactTitle {
       @extend .carouseltitle;
       color: black;
-      font-size: 24px;
-      font-weight: 400;
     }
 
     .personnalSection {
@@ -97,56 +95,11 @@
         .contactPersonnalTitle {
           @extend .header-bold-medium;
           color: black;
-          font-size: 16px;
         }
 
         .contactPersonnalDesc {
           @extend .carouseldescription;
           color: black;
-          font-size: 14px;
-        }
-      }
-    }
-  }
-}
-
-@include sm {
-  .container {
-    .content {
-      .title {
-        font-size: 35px;
-      }
-      .subtitle {
-        font-size: 18px;
-        line-height: 20px;
-      }
-    }
-  }
-}
-
-@include lg {
-  .container {
-    .content {
-      .title {
-        font-size: 40px;
-      }
-      .subtitle {
-        font-size: 20px;
-        line-height: 25px;
-      }
-    }
-    .contactSection {
-      .contactTitle {
-        font-size: 28px;
-      }
-      .personnalSection {
-        .personnal {
-          .contactPersonnalTitle {
-            font-size: 20px;
-          }
-          .contactPersonnalDesc {
-            font-size: 18px;
-          }
         }
       }
     }
@@ -156,13 +109,6 @@
 @include xl {
   .container {
     .content {
-      .title {
-        font-size: 45px;
-      }
-      .subtitle {
-        font-size: 22px;
-        line-height: 28px;
-      }
       .contactForm {
         flex-direction: row;
         .rowInputs {
@@ -183,13 +129,6 @@
     }
     .content {
       padding: 2rem 4rem;
-      .title {
-        font-size: 50px;
-      }
-      .subtitle {
-        font-size: 26px;
-        line-height: 32px;
-      }
       .contactForm {
         flex-direction: row;
         .rowInputs {
@@ -199,27 +138,9 @@
           width: 67%;
         }
       }
-      .buttonSection {
-        .brochureButton {
-          font-size: 18px;
-        }
-      }
     }
     .contactSection {
       padding: 2rem 4rem;
-      .contactTitle {
-        font-size: 40px;
-      }
-      .personnalSection {
-        .personnal {
-          .contactPersonnalTitle {
-            font-size: 28px;
-          }
-          .contactPersonnalDesc {
-            font-size: 26px;
-          }
-        }
-      }
     }
   }
 }

@@ -3,8 +3,9 @@ import styles from "./FirstSection.module.scss";
 import Wedge from "@/assets/wedge.svg";
 import { Button } from "@mui/material";
 import compactor from "@/assets/compactor.gif";
+import homemain from "@/assets/homemain.gif";
 import Carousel from "react-multi-carousel";
-import 'react-multi-carousel/lib/styles.css';
+import "react-multi-carousel/lib/styles.css";
 
 const FirstSection = () => {
   return (
@@ -76,11 +77,13 @@ const FirstSection = () => {
           swipeable
         >
           <div className={styles.slickItem}>
-            <Image
-              src={compactor}
-              alt="Generator Image"
-              className={styles.carouselImage}
-            />
+            <div className={styles.imageSection}>
+              <Image
+                src={homemain}
+                alt="Generator Image"
+                className={styles.carouselImage}
+              />
+            </div>
             <div className={styles.carouselContent}>
               <span className={styles.carouselTitle}>
                 Generators and Canopies
@@ -96,11 +99,13 @@ const FirstSection = () => {
             </div>
           </div>
           <div className={styles.slickItem}>
-            <Image
-              src={compactor}
-              alt="Generator Image"
-              className={styles.carouselImage}
-            />
+            <div className={styles.imageSection}>
+              <Image
+                src={homemain}
+                alt="Generator Image"
+                className={styles.carouselImage}
+              />
+            </div>
             <div className={styles.carouselContent}>
               <span className={styles.carouselTitle}>
                 Generators and Canopies

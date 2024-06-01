@@ -11,7 +11,7 @@
     .bannerSection {
       .machineBanner {
         width: calc(100vw - 2rem);
-        height: calc((100vh - 9rem - 15rem) / 3);
+        height: calc((100vh - 9rem - 15rem) / 2);
       }
 
       .bannerLiterals {
@@ -26,12 +26,10 @@
 
         .bannerTitle {
           @extend .title;
-          font-size: 28px;
-          line-height: 24px;
         }
 
         .bannerDesc {
-          font-size: 14px;
+          @extend .description;
         }
 
         .brochureButton {
@@ -46,10 +44,12 @@
 
     .featureSection {
       color: black;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
 
       .featureMainTitle {
         @extend .title;
-        font-size: 28px;
       }
 
       .features {
@@ -68,12 +68,12 @@
             gap: 0.5rem;
 
             .ftTitle {
-              font-size: 18px;
               font-weight: 600;
+              @extend .carouseltitle;
             }
 
             .ftDescription {
-              font-size: 14px;
+              @extend .carouseldescription;
             }
           }
         }
@@ -88,23 +88,12 @@
       .bannerSection {
         .bannerLiterals {
           max-width: 25rem;
-          .bannerDesc {
-            font-size: 15px;
-          }
         }
       }
       .featureSection {
         .features {
           .featureItem {
             max-width: 22rem;
-            .featureLiterals {
-              .ftTitle {
-                font-size: 20px;
-              }
-              .ftDescription {
-                font-size: 16px;
-              }
-            }
           }
         }
       }
@@ -116,33 +105,19 @@
   .container {
     .machineTab {
       .bannerSection {
+        .machineBanner {
+          height: calc((100vh - 9rem - 15rem) / 1.5);
+        }
         .bannerLiterals {
           top: 2rem;
-          max-width: 35rem;
-          .bannerTitle {
-            font-size: 35px;
-          }
-          .bannerDesc {
-            font-size: 18px;
-          }
+          max-width: 38rem;
         }
       }
       .featureSection {
-        .featureMainTitle {
-          font-size: 30px;
-        }
         .features {
           gap: 2rem;
           .featureItem {
             max-width: 19rem;
-            .featureLiterals {
-              .ftTitle {
-                font-size: 22px;
-              }
-              .ftDescription {
-                font-size: 18px;
-              }
-            }
           }
         }
       }
@@ -158,32 +133,11 @@
         .machineBanner {
           width: calc(100vw - 8rem);
         }
-        .bannerLiterals {
-          top: 2rem;
-          max-width: 35rem;
-          .bannerTitle {
-            line-height: 20px;
-          }
-          .bannerDesc {
-            font-size: 19px;
-          }
-        }
       }
       .featureSection {
-        .featureMainTitle {
-          font-size: 32px;
-        }
         .features {
           .featureItem {
             max-width: 22rem;
-            .featureLiterals {
-              .ftTitle {
-                font-size: 24px;
-              }
-              .ftDescription {
-                font-size: 20px;
-              }
-            }
           }
         }
       }
@@ -195,37 +149,20 @@
   .container {
     .machineTab {
       .bannerSection {
+        .machineBanner {
+          height: calc((100vh - 9rem - 15rem) / 4.5);
+        }
         .bannerLiterals {
           gap: 1rem;
           top: 2rem;
           left: 2rem;
           max-width: 60rem;
-          .bannerTitle {
-            line-height: 20px;
-          }
-          .bannerDesc {
-            font-size: 22px;
-          }
-          .brochureButton {
-            font-size: 18px;
-          }
         }
       }
       .featureSection {
-        .featureMainTitle {
-          font-size: 35px;
-        }
         .features {
           .featureItem {
             max-width: 25rem;
-            .featureLiterals {
-              .ftTitle {
-                font-size: 28px;
-              }
-              .ftDescription {
-                font-size: 22px;
-              }
-            }
           }
         }
       }

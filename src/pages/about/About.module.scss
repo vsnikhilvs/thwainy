@@ -31,14 +31,11 @@
       .titleText {
         @extend .title;
         color: black;
-        font-size: 28px;
-        line-height: 35px;
       }
 
       .descriptionText {
         @extend .description;
         color: black;
-        font-size: 20px;
       }
     }
 
@@ -80,8 +77,6 @@
         @extend .carouseldescription;
         color: black;
         text-align: justify;
-        font-size: 14px;
-        line-height: 16px;
       }
     }
   }
@@ -93,14 +88,6 @@
       .mainSectionRight {
         .carouselImage {
           width: 300px;
-        }
-      }
-    }
-    .featureSection {
-      .feature {
-        .featureContent {
-          font-size: 16px;
-          line-height: 18px;
         }
       }
     }
@@ -122,10 +109,6 @@
           width: 300px;
           height: 300px;
         }
-        .featureContent {
-          font-size: 16px;
-          line-height: 23px;
-        }
       }
     }
   }
@@ -140,28 +123,12 @@
         }
       }
     }
-    .featureSection {
-      .feature {
-        .featureContent {
-          font-size: 20px;
-          line-height: 26px;
-        }
-      }
-    }
   }
 }
 
 @include xl {
   .container {
     .main {
-      .mainSection {
-        .titleText {
-          font-size: 35px;
-        }
-        .descriptionText {
-          font-size: 28px;
-        }
-      }
       .mainSectionRight {
         .carouselImage {
           width: 600px;
@@ -170,12 +137,6 @@
     }
     .featureSection {
       padding: 2rem 4rem;
-      .feature {
-        .featureContent {
-          font-size: 22px;
-          line-height: 26px;
-        }
-      }
     }
   }
 }
@@ -183,17 +144,6 @@
 @include xxl {
   .container {
     .main {
-      .brochureButton {
-        font-size: 22px;
-      }
-      .mainSection {
-        .titleText {
-          font-size: 45px;
-        }
-        .descriptionText {
-          font-size: 32px;
-        }
-      }
       .mainSectionRight {
         .carouselImage {
           width: 900px;
@@ -202,12 +152,6 @@
     }
     .featureSection {
       padding: 2rem 4rem;
-      .feature {
-        .featureContent {
-          font-size: 28px;
-          line-height: 38px;
-        }
-      }
     }
   }
 }

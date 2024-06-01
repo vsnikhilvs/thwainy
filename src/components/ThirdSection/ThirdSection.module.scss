@@ -19,38 +19,33 @@
   }
 
   .mainSection {
-    padding-right: 2rem;
     display: flex;
+    flex-direction: column;
     gap: 3rem;
     width: calc(100vw - 10%);
 
     .leftSection {
-      width: 60%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      width: 60%;
 
       .titleText {
         @extend .title;
         color: black;
-        font-size: 35px;
-        line-height: 38px;
       }
 
       .descriptionText {
         @extend .description;
         color: black;
-        font-size: 16px;
-        line-height: 18px;
       }
     }
 
     .rightSection {
-      width: 40%;
+      width: 100%;
       display: flex;
       align-items: center;
-      flex-direction: column;
+      flex-direction: row;
       flex-wrap: wrap;
       gap: 3rem;
 
@@ -73,16 +68,7 @@
 @include md {
   .container {
     .mainSection {
-      gap: 0rem;
-      .leftSection {
-        .titleText {
-          font-size: 40px;
-        }
-        .descriptionText {
-          font-size: 18px;
-          line-height: 22px;
-        }
-      }
+      gap: 2rem;
     }
   }
 }
@@ -90,18 +76,15 @@
 @include lg {
   .container {
     .mainSection {
+      flex-direction: row;
+      padding-right: 2rem;
       gap: 0rem;
       .leftSection {
-        .titleText {
-          font-size: 45px;
-          line-height: 45px;
-        }
-        .descriptionText {
-          font-size: 20px;
-          line-height: 25px;
-        }
+        width: 60%;
       }
       .rightSection {
+        flex-direction: column;
+        width: 40%;
         .carouselImage {
           width: 75px;
           height: 75px;
@@ -116,16 +99,6 @@
     padding: 0 4rem;
     .mainSection {
       gap: 3rem;
-      .leftSection {
-        .titleText {
-          font-size: 45px;
-          line-height: 45px;
-        }
-        .descriptionText {
-          font-size: 20px;
-          line-height: 25px;
-        }
-      }
       .rightSection {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

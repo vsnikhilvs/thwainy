@@ -24,12 +24,10 @@
 
     .activeMenu {
       @extend .header-bold;
-      font-size: 18px;
     }
 
     .inActiveMenu {
       @extend .header;
-      font-size: 18px;
     }
 
     .menuSection {
@@ -53,7 +51,6 @@
       color: $primaryColor;
       align-items: center;
       justify-content: center;
-      font-size: 10px;
     }
 
     .downloadSection {
@@ -79,7 +76,6 @@
     text-transform: none;
     color: $primaryColor;
     @extend .header;
-    font-size: 18px;
   }
 }
 
@@ -90,7 +86,6 @@
   .subMenuPopupButton {
     text-transform: none;
     color: $primaryColor;
-    @extend .header;
     font-size: 16px;
 
     &:hover {
@@ -154,32 +149,10 @@
 @include xxl {
   .container {
     .menu {
-      .activeMenu {
-        font-size: 25px;
-      }
-      .inActiveMenu {
-        font-size: 25px;
-      }
       .langSection {
         width: 35px;
         height: 35px;
-        font-size: 20px;
       }
-      .downloadSection {
-        .brochureButton {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-  .subContainer {
-    .subMenuButton {
-      font-size: 24px;
-    }
-  }
-  .popupButtons {
-    .subMenuPopupButton {
-      font-size: 24px;
     }
   }
 }

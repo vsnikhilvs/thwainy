@@ -4,7 +4,6 @@
 
 .container {
   background: #f1f1f1;
-  // height: calc(100vh - 15rem);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -33,7 +32,6 @@
 
       .sectionTitle {
         @extend .title;
-        font-size: 35px;
       }
 
       .features {
@@ -42,33 +40,26 @@
         gap: 2rem;
 
         .featureItem {
-          max-width: 15rem;
-          // max-width: 25rem;
           display: flex;
           gap: 1rem;
-          // gap: 2rem;
 
           .featureImage {
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
           }
 
           .featureLiterals {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            // gap: 1rem;
 
             .ftTitle {
-              @extend .featureTitle;
-              font-size: 16px;
-              line-height: 20px;
+              @extend .subtitle;
+              font-weight: 400;
             }
 
             .ftDescription {
-              @extend .featureDescription;
-              font-size: 14px;
-              line-height: 20px;
+              @extend .subdescription;
             }
           }
         }
@@ -81,21 +72,9 @@
   .container {
     .mainSection {
       .whySection {
-        .sectionTitle {
-          font-size: 40px;
-        }
         .features {
           .featureItem {
             max-width: 20rem;
-
-            .featureLiterals {
-              .ftTitle {
-                font-size: 18px;
-              }
-              .ftDescription {
-                font-size: 16px;
-              }
-            }
           }
         }
       }
@@ -107,20 +86,12 @@
   .container {
     .mainSection {
       .whySection {
-        .sectionTitle {
-          font-size: 45px;
-        }
         .features {
           .featureItem {
             max-width: 25rem;
-
-            .featureLiterals {
-              .ftTitle {
-                font-size: 18px;
-              }
-              .ftDescription {
-                font-size: 16px;
-              }
+            .featureImage {
+              width: 50px;
+              height: 50px;
             }
           }
         }
@@ -138,17 +109,6 @@
         .features {
           .featureItem {
             max-width: 20rem;
-
-            .featureLiterals {
-              .ftTitle {
-                font-size: 20px;
-                line-height: 24px;
-              }
-              .ftDescription {
-                font-size: 18px;
-                line-height: 24px;
-              }
-            }
           }
         }
       }

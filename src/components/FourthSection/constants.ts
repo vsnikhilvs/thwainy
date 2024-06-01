@@ -7,19 +7,19 @@ import flexibility from "@/assets/flexibility.svg";
 export const title = "Why Thwainy Industries?";
 export const features = [
   {
-    title: "QUALITY ASSURANCE",
+    title: "Quality Assurance",
     description:
       "Our products are crafted with precision and adhere to the highest quality standards.",
     logo: qa,
   },
   {
-    title: "INNOVATION",
+    title: "Innovation",
     description:
       "We constantly evolve with the latest advancements, ensuring you benefit from the most innovative solutions.",
     logo: innovation,
   },
   {
-    title: "RELIABILITY",
+    title: "Reliability",
     description:
       "With Thwainy Industries, reliability is a promise. Our products are built to endure and perform consistently.",
     logo: reliability,
