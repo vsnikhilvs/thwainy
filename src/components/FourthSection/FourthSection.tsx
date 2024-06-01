@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./FourthSection.module.scss";
-import { title, features } from "./constants";
+import { title, features } from "../../constants/fourthSection/constants";
 
 const FourthSection = () => {
   return (

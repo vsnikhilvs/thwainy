@@ -5,6 +5,8 @@ import { Button } from "@mui/material";
 import bunded from "@/assets/bunded.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { carouselConfig } from "@/constants/carousel/constants";
+import { constants } from "@/constants/secondSection/constants";
 
 const SecondSection = () => {
   return (
@@ -12,162 +14,45 @@ const SecondSection = () => {
       <Image src={Wedge} alt="Wedge image" className={styles.wedge} />
       <div className={styles.mainSection}>
         <Carousel
-          additionalTransfrom={0}
-          arrows
-          autoPlaySpeed={3000}
-          centerMode={false}
           className=""
           containerClass="container-with-dots"
           dotListClass=""
-          draggable
-          focusOnSelect={false}
-          infinite
           itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={true}
-          renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 640,
-              },
-              items: 1,
-              partialVisibilityGutter: 40,
-            },
-            mobile: {
-              breakpoint: {
-                max: 639,
-                min: 0,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
-            },
-            tablet: {
-              breakpoint: {
-                max: 1024,
-                min: 480,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
-            },
-          }}
-          rewind={false}
-          rewindWithAnimation={false}
-          rtl={false}
-          shouldResetAutoplay
-          showDots={false}
           sliderClass=""
-          slidesToSlide={1}
-          swipeable
+          {...carouselConfig}
         >
-          <div className={styles.carouselItem}>
-            <div className={styles.carouselImage}>
-              <Image
-                src={bunded}
-                alt="Generator Image"
-                className={styles.carouselItemImage}
-              />
-            </div>
-            <div className={styles.carouselContent}>
-              <span className={styles.carouselTitle}>Bunded Tank</span>
-              <span className={styles.carouselDescription}>
-                Expertly crafted, our Bunded tanks ensure the secure storage and
-                transportation of diesel fuel. These tanks function as auxiliary
-                fuel sources, effectively fueling many engines and additional
-                equipment via a dedicated pump. All enclosed within a lockable
-                access hatch for maximum safety.
-              </span>
-              <div className={styles.carouselFeatures}>
-                <div className={styles.carouselFeatureItem}>
-                  <span className={styles.carouselFeatureTitle}>
-                    STACKABLE CORNER BRACKETS
-                  </span>
-                  <span className={styles.carouselFeatureDescription}>
-                    Stack with ease using our stackable corner brackets,
-                    allowing convenient stacking of up to two units when empty.
-                  </span>
-                </div>
-                <div className={styles.carouselFeatureItem}>
-                  <span className={styles.carouselFeatureTitle}>
-                    REMOVABLE INNER TANK
-                  </span>
-                  <span className={styles.carouselFeatureDescription}>
-                    Effortlessly maintain and inspect your tank with the
-                    convenience of a removable inner tank.
-                  </span>
-                </div>
-                <div className={styles.carouselFeatureItem}>
-                  <span className={styles.carouselFeatureTitle}>
-                    TWO WAY FORKLIFT POCKETS
-                  </span>
-                  <span className={styles.carouselFeatureDescription}>
-                    Facilitate swift and effortless mobility with the inclusion
-                    of two-way forklift pockets, ensuring convenient
-                    maneuvering.
-                  </span>
-                </div>
+          {constants.carouselItems.map((c, i) => (
+            <div key={i} className={styles.carouselItem}>
+              <div className={styles.carouselImage}>
+                <Image
+                  src={c.image}
+                  alt={c.itemAltText}
+                  className={styles.carouselItemImage}
+                />
               </div>
-              <Button variant="contained" className={styles.brochureButton}>
-                Know More
-              </Button>
-            </div>
-          </div>
-          <div className={styles.carouselItem}>
-            <div className={styles.carouselImage}>
-              <Image
-                src={bunded}
-                alt="Generator Image"
-                className={styles.carouselItemImage}
-              />
-            </div>
-            <div className={styles.carouselContent}>
-              <span className={styles.carouselTitle}>Bunded Tank</span>
-              <span className={styles.carouselDescription}>
-                Expertly crafted, our Bunded tanks ensure the secure storage and
-                transportation of diesel fuel. These tanks function as auxiliary
-                fuel sources, effectively fueling many engines and additional
-                equipment via a dedicated pump. All enclosed within a lockable
-                access hatch for maximum safety.
-              </span>
-              <div className={styles.carouselFeatures}>
-                <div className={styles.carouselFeatureItem}>
-                  <span className={styles.carouselFeatureTitle}>
-                    STACKABLE CORNER BRACKETS
-                  </span>
-                  <span className={styles.carouselFeatureDescription}>
-                    Stack with ease using our stackable corner brackets,
-                    allowing convenient stacking of up to two units when empty.
-                  </span>
+              <div className={styles.carouselContent}>
+                <span className={styles.carouselTitle}>{c.title}</span>
+                <span className={styles.carouselDescription}>
+                  {c.description}
+                </span>
+                <div className={styles.carouselFeatures}>
+                  {c.features.map((f, i) => (
+                    <div key={i} className={styles.carouselFeatureItem}>
+                      <span className={styles.carouselFeatureTitle}>
+                        {f.title}
+                      </span>
+                      <span className={styles.carouselFeatureDescription}>
+                        {f.description}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-                <div className={styles.carouselFeatureItem}>
-                  <span className={styles.carouselFeatureTitle}>
-                    REMOVABLE INNER TANK
-                  </span>
-                  <span className={styles.carouselFeatureDescription}>
-                    Effortlessly maintain and inspect your tank with the
-                    convenience of a removable inner tank.
-                  </span>
-                </div>
-                <div className={styles.carouselFeatureItem}>
-                  <span className={styles.carouselFeatureTitle}>
-                    TWO WAY FORKLIFT POCKETS
-                  </span>
-                  <span className={styles.carouselFeatureDescription}>
-                    Facilitate swift and effortless mobility with the inclusion
-                    of two-way forklift pockets, ensuring convenient
-                    maneuvering.
-                  </span>
-                </div>
+                <Button variant="contained" className={styles.brochureButton}>
+                  {constants.buttonText}
+                </Button>
               </div>
-              <Button variant="contained" className={styles.brochureButton}>
-                Know More
-              </Button>
             </div>
-          </div>
+          ))}
         </Carousel>
       </div>
     </div>

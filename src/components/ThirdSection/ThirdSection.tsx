@@ -8,6 +8,7 @@ import asad1 from "@/assets/asad1.png";
 import r1 from "@/assets/r1.png";
 import holding from "@/assets/holding.png";
 import cyan from "@/assets/cyan.png";
+import { constants } from "@/constants/thirdSection/constants";
 
 const images = [mhm, asad, asad1, r1, holding, cyan];
 
@@ -17,19 +18,12 @@ const ThirdSection = () => {
       <Image src={Wedge} alt="Wedge image" className={styles.wedge} />
       <div className={styles.mainSection}>
         <div className={styles.leftSection}>
-          <span className={styles.titleText}>Found in the biggest cities</span>
+          <span className={styles.titleText}>{constants.title}</span>
           <span className={styles.descriptionText}>
-            Thwainy Industries is a leading provider of advanced power
-            generation solutions and city maintenance equipment, specializing in
-            diesel generators, screw compressors, trash compactors, block
-            grippers, and scissor lifts. Our state-of-the-art products are
-            designed for exceptional performance and reliability, catering to
-            the diverse demands of the power and city infrastructure sectors.
-            Choose Thwainy Industries for innovative solutions that drive
-            efficiency and effectiveness in your operations.
+            {constants.description}
           </span>
           <Button variant="contained" className={styles.brochureButton}>
-            Read More
+            {constants.buttonText}
           </Button>
         </div>
         <div className={styles.rightSection}>
