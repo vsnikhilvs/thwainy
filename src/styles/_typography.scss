@@ -1,96 +1,98 @@
 @import "./breakpoints";
 
 .header {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24.2px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.2px;
 }
 
 .header-bold {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24.2px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.2px;
 }
 
 .header-bold-medium {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 26.63px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.63px;
 }
 
 .title {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36.31px;
-  @media (min-width: #{$screen-lg-min}) {
-    font-size: 52px;
-    font-weight: 300;
-    line-height: 60.94px;
-  }
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.31px;
+    @media (min-width: #{$screen-lg-min}) {
+        font-size: 52px;
+        font-weight: 300;
+        line-height: 60.94px;
+    }
 }
 
 .description {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.94px;
-  @media (min-width: #{$screen-lg-min}) {
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28.13px;
-  }
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    @media (min-width: #{$screen-lg-min}) {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 28.13px;
+    }
 }
 
 .subtitle {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 18.15px;
-  @media (min-width: #{$screen-lg-min}) {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 30.47px;
-  }
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.15px;
+    @media (min-width: #{$screen-lg-min}) {
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 30.47px;
+    }
 }
 
 .subdescription {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 12.1px;
-  @media (min-width: #{$screen-lg-min}) {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 20.03px;
-  }
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12.1px;
+    @media (min-width: #{$screen-lg-min}) {
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 20.03px;
+    }
 }
 
 .carouseltitle {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 23.44px;
-  @media (min-width: #{$screen-lg-min}) {
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 300;
-    line-height: 42.19px;
-  }
+    line-height: 23.44px;
+    @media (min-width: #{$screen-lg-min}) {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 42.19px;
+    }
 }
 
 .carouseldescription {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 16.41px;
-  @media (min-width: #{$screen-lg-min}) {
-    font-size: 24px;
+    font-size: 12px;
     font-weight: 300;
-    line-height: 28.13px;
-  }
+    line-height: 16.41px;
+    text-align: justify;
+    @media (min-width: #{$screen-lg-min}) {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 28.13px;
+        text-align: justify;
+    }
 }
 
 .featureTitle {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 12.89px;
-  @media (min-width: #{$screen-lg-min}) {
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 33.89px;
-  }
+    line-height: 12.89px;
+    @media (min-width: #{$screen-lg-min}) {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 33.89px;
+    }
 }

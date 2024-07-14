@@ -37,6 +37,7 @@
 
       .descriptionText {
         @extend .description;
+        text-align: justify;
         color: black;
       }
     }
@@ -81,10 +82,13 @@
       gap: 0rem;
       .leftSection {
         width: 60%;
+        padding-top: 2rem;
       }
       .rightSection {
+        padding-top: 2rem;
         flex-direction: column;
         width: 40%;
+        gap: 2rem;
         .carouselImage {
           width: 75px;
           height: 75px;

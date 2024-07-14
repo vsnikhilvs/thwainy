@@ -145,3 +145,15 @@ a {
   min-width: 25px !important;
   min-height: 25px !important;
 }
+
+.MuiAppBar-root {
+  background-color: transparent;
+}
+
+.MuiToolbar-root {
+  height: 5.125rem !important;
+}
+
+.MuiDrawer-paper {
+  background-color: #223a5c;
+}
