@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 2rem;
 
     .brochureButton {
       border-radius: 0;
@@ -45,7 +45,7 @@
       .carouselImage {
         width: 300px;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
   }
@@ -54,7 +54,7 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     .normal {
       flex-direction: row;
     }
@@ -65,15 +65,18 @@
 
     .feature {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem;
+      object-fit: cover;
 
       .carouselImage {
-        width: 200px;
-        height: 200px;
+        width: 420px;
+        height: 250px;
       }
 
       .featureContent {
+        width: 95%;
         @extend .carouseldescription;
         color: black;
         text-align: justify;
@@ -91,6 +94,18 @@
         }
       }
     }
+    .featureSection {
+      gap: 2rem;
+      .feature {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2rem;
+        .carouselImage {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
   }
 }
 
@@ -99,7 +114,8 @@
     .main {
       .mainSectionRight {
         .carouselImage {
-          width: 400px;
+          width: 500px;
+          height: 450px;
         }
       }
     }
@@ -107,7 +123,7 @@
       .feature {
         .carouselImage {
           width: 300px;
-          height: 300px;
+          height: 225px;
         }
       }
     }
@@ -120,6 +136,16 @@
       .mainSectionRight {
         .carouselImage {
           width: 500px;
+        }
+      }
+    }
+    .featureSection {
+      gap: 3rem;
+      .feature {
+        gap: 2rem;
+        .carouselImage {
+          width: 450px;
+          height: 400px;
         }
       }
     }

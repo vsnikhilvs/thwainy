@@ -31,7 +31,7 @@ const navItems = [
     { name: "Home", url: "/" },
     { name: "About", url: "/about" },
     { name: "Products", url: "/products" },
-    { name: "News", url: "/news" },
+    { name: "News", url: "/" },
     { name: "Contact Us", url: "/contact" },
 ];
 
@@ -90,7 +90,7 @@ const Header = () => {
     return (
         <>
             <div className={styles.container}>
-                <AppBar component="nav">
+                <AppBar component="nav" position="static">
                     <Toolbar>
                         <Typography
                             variant="h6"
@@ -98,6 +98,7 @@ const Header = () => {
                             sx={{
                                 flexGrow: 1,
                                 display: { xs: "block", sm: "block" },
+                                paddingTop: "0.5rem",
                             }}
                         >
                             <Image
@@ -136,7 +137,7 @@ const Header = () => {
                         </IconButton>
                     </Toolbar>
                 </AppBar>
-                <nav>
+                <nav className={styles.navBar}>
                     <Drawer
                         anchor="right"
                         container={container}

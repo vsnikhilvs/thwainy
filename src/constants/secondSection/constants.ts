@@ -2,6 +2,7 @@ import bunded from "@/assets/bunded.svg";
 
 export const constants = {
     buttonText: "Know More",
+    downloadBrochureText: "Download Brochure",
     carouselItems: [
         {
             itemAltText: "Generator Image",

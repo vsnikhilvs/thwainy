@@ -1,12 +1,6 @@
-import generator_product from "@/assets/generator_product.png";
-import canopies_product from "@/assets/canopies_product.png";
-import bunded_product from "@/assets/bunded_product.png";
 import temp from "@/assets/temp.svg";
 import insulation from "@/assets/insulation.svg";
 import voltage from "@/assets/voltage.svg";
-import frequency from "@/assets/frequency.svg";
-import waveform from "@/assets/waveform.svg";
-import insulationresistance from "@/assets/insulationresistance.svg";
 
 export const constants = {
   categories: [
@@ -15,12 +9,20 @@ export const constants = {
       title: "Generators",
     },
     {
-      categoryId: "canopies",
-      title: "Canopies",
+      categoryId: "screwcompressor",
+      title: "Screw Compressor",
     },
     {
-      categoryId: "bundedtank",
-      title: "Bunded Tank",
+      categoryId: "gripper",
+      title: "Gripper",
+    },
+    {
+      categoryId: "scissorlift",
+      title: "Electric Scissor Lift",
+    },
+    {
+      categoryId: "compactor",
+      title: "Stationary Compactor",
     },
   ],
   data: [
@@ -28,132 +30,75 @@ export const constants = {
       categoryId: "generators",
       value: {
         machineId: "GID001",
-        banner: generator_product,
-        title: "First Generator",
+        title: "Generators",
         description:
           "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
         features: [
           {
             image: temp,
-            title: "Temperature rise",
+            title: "Reliability",
             description:
               "Achieves a 900 temperature rise at 400 ambient conditions.",
           },
           {
             image: insulation,
-            title: "Insulation",
+            title: "Low Fuel Consumption",
             description: "Built with class H insulation for enhanced safety",
           },
           {
             image: voltage,
-            title: "Voltage regulation",
+            title: "Fewer CO2 Emmisions",
             description:
               "Maintains voltage within ±0.5% for stable power output.",
           },
+        ],
+        specification: [
           {
-            image: frequency,
-            title: "Frequency regulation",
-            description:
-              "Ensures frequency stability within 5.0% from no-load to full load.",
+            item: 'Product',
+            value: 'Diesel Generator',
           },
           {
-            image: waveform,
-            title: "Voltage waveform",
-            description:
-              "Guarantees a deviation factor of open-circuit terminal voltage below 0.06.",
+            item: 'Models',
+            value: 'THWAINY–EP–15kVA, THWAINY–EP–600kVA',
           },
           {
-            image: insulationresistance,
-            title: "Insulation resistance",
-            description:
-              "Provides insulation resistance higher than 3 mega-ohms, ensuring safety and reliability.",
+            item: 'Capacities (Continuous kVA)',
+            value: '15 – 20 – 25 – 35 – 45 – 50 – 60 – 75 – 100 – 125 – 150 – 200 – 300 – 400 – 500 – 600',
+          },
+          {
+            item: 'Voltage',
+            value: '190～220/190～240V, 380～440/380～480V',
+          },
+          {
+            item: 'Power Factor',
+            value: 'Three Phase 0.8 Power Factor',
+          },
+          {
+            item: 'Engine',
+            value: 'Moteurs Baudouin',
+          },
+          {
+            item: 'Alternator',
+            value: 'Yanan',
+          },
+          {
+            item: 'Sound',
+            value: '50Hz - 60dB, 60Hz - 63dB',
           },
         ],
-        specification: {
-          title1: "thwainy",
-          title2: "40-ep",
-          speciality: "50kva class soundproof type",
-          components: [
-            {
-              title: "Alternator",
-              properties: [
-                {
-                  title: "Frequency",
-                  value: "60Hz",
-                },
-                {
-                  title: "Output rating (kVA)",
-                  values: [
-                    {
-                      title: "Continuous",
-                      value: "42",
-                    },
-                    {
-                      title: "Standby",
-                      value: "50",
-                    },
-                  ],
-                },
-                {
-                  title: "No. Of phases",
-                  value: "3,4-Wire",
-                },
-              ],
-            },
-            {
-              title: "Engine",
-              properties: [
-                {
-                  title: "Maker Model",
-                  values: [{ title: "Cummins", value: "4BTA3.9-G2" }],
-                },
-                {
-                  title: "Output Rating",
-                  values: [
-                    { title: "PS/rpm", value: "53HP" },
-                    { title: "kW/rpm", value: "40kW" },
-                  ],
-                },
-                {
-                  title: "Fuel",
-                  value: "Diesel-130L",
-                },
-              ],
-            },
-            {
-              title: "Unit",
-              properties: [
-                {
-                  title: "Dimensions(LxWxH)",
-                  values: [{ title: "mm", value: "2300x1000x1450" }],
-                },
-                {
-                  title: "Dry Weight",
-                  values: [{ title: "Kg", value: "812" }],
-                },
-              ],
-            },
-            {
-              title: "Sound Level",
-              properties: [
-                {
-                  title: "Dimensions(LxWxH)",
-                  values: [
-                    { title: "7M dB(A) 1500/1800 rpm (min^-1)", value: "71" },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
+        options: [
+          'Intermediate models can be provided upon request',
+          'Greater capacities can be provided upon request',
+          'Automatic Transfer Switch',
+          'Block Heaters',
+        ]
       },
     },
     {
-      categoryId: "canopies",
+      categoryId: "screwcompressor",
       value: {
-        machineId: "GID001",
-        title: "First Canopy",
-        banner: canopies_product,
+        machineId: "SCID001",
+        title: "Screw Compressor",
         description:
           "Discover the convenience of our generator canopies available for sale. Whether it's for events, construction sites, or short-term projects, our reliable and well-maintained canopies provide hassle-free access to enhance your operations.",
         features: [
@@ -175,39 +120,54 @@ export const constants = {
             description:
               "In outdoor settings, generator canopies offer backup power, controlling engine overheating and shielding against rain and sunlight.",
           },
+        ],
+        specification: [
           {
-            image: frequency,
-            title: "Electric Industries",
-            description:
-              "Vital for continuous power supply during electrical outages, generator canopies maintain optimal working conditions for equipment.",
+            item: 'Product',
+            value: 'Screw Compressor',
           },
           {
-            image: waveform,
-            title: "Voltage waveform",
-            description:
-              "Guarantees a deviation factor of open-circuit terminal voltage below 0.06.",
+            item: 'Models',
+            value: 'THWAINY–EP–15kVA, THWAINY–EP–600kVA',
           },
           {
-            image: insulationresistance,
-            title: "Commercial Buildings",
-            description:
-              "Canopies support critical systems and equipment, extending generator life, and minimizing noise pollution",
+            item: 'Capacities (Continuous kVA)',
+            value: '15 – 20 – 25 – 35 – 45 – 50 – 60 – 75 – 100 – 125 – 150 – 200 – 300 – 400 – 500 – 600',
           },
           {
-            image: insulationresistance,
-            title: "Various Plants",
-            description:
-              "Whether in manufacturing plants or waste water treatment facilities, generator canopies ensure efficient power generation while reducing environmental noise impact.",
+            item: 'Voltage',
+            value: '190～220/190～240V, 380～440/380～480V',
+          },
+          {
+            item: 'Power Factor',
+            value: 'Three Phase 0.8 Power Factor',
+          },
+          {
+            item: 'Engine',
+            value: 'Moteurs Baudouin',
+          },
+          {
+            item: 'Alternator',
+            value: 'Yanan',
+          },
+          {
+            item: 'Sound',
+            value: '50Hz - 60dB, 60Hz - 63dB',
           },
         ],
+        options: [
+          'Intermediate models can be provided upon request',
+          'Greater capacities can be provided upon request',
+          'Automatic Transfer Switch',
+          'Block Heaters',
+        ]
       },
     },
     {
-      categoryId: "bundedtank",
+      categoryId: "gripper",
       value: {
-        machineId: "GID001",
-        title: "Bunded Tank",
-        banner: bunded_product,
+        machineId: "GRID001",
+        title: "Gripper",
         description:
           "Expertly crafted, our Bunded tanks ensure the secure storage and transportation of diesel fuel. These tanks function as auxiliary fuel sources, effectively fueling many engines and additional equipment via a dedicated pump. All enclosed within a lockable access hatch for maximum safety.",
         features: [
@@ -228,6 +188,150 @@ export const constants = {
             title: "Fleet Refuelling",
             description:
               "Fleet refueling becomes seamless with the Bunded tank, minimizing downtime in remote locations or on your site",
+          },
+        ],
+        specification: [
+          {
+            item: 'Product',
+            value: 'Gripper',
+          },
+          {
+            item: 'Power',
+            value: '8.5 kW',
+          },
+          {
+            item: 'Volume per Stroke',
+            value: '1.15 m3',
+          },
+          {
+            item: 'Volume per Hour',
+            value: '95 m3  (Theoretical)',
+          },
+          {
+            item: 'Cycle Time',
+            value: '51 seconds (Average)',
+          },
+          {
+            item: 'Penetration Depth',
+            value: '420 mm',
+          },
+          {
+            item: 'Filling Opening',
+            value: '960 x 1860 mm (bottom), 1470 x 1860 mm (top)',
+          },
+          {
+            item: 'Filling Height',
+            value: '1400 mm',
+          },
+        ],
+      },
+    },
+    {
+      categoryId: "scissorlift",
+      value: {
+        machineId: "SLID001",
+        title: "Electric Scissor Lift",
+        description:
+          "Expertly crafted, our Bunded tanks ensure the secure storage and transportation of diesel fuel. These tanks function as auxiliary fuel sources, effectively fueling many engines and additional equipment via a dedicated pump. All enclosed within a lockable access hatch for maximum safety.",
+        features: [
+          {
+            image: temp,
+            title: "On-site Fuel Supply",
+            description:
+              "The Bunded tank range offers the perfect solution for short-term on-site fuel storage needs",
+          },
+          {
+            image: insulation,
+            title: "Generator and Auxilliary Equipment",
+            description:
+              " The Bunded tank can simultaneously connect to a diesel-powered piece of equipment and dispense fuel through a pump.",
+          },
+          {
+            image: voltage,
+            title: "Fleet Refuelling",
+            description:
+              "Fleet refueling becomes seamless with the Bunded tank, minimizing downtime in remote locations or on your site",
+          },
+        ],
+        specification: [
+          {
+            item: 'Product',
+            value: 'Electric Scissor Lift',
+          },
+          {
+            item: 'Types',
+            value: 'TSL 12, TSL 14',
+          },
+          {
+            item: 'Maximum Platform Height (m)',
+            value: '12 m - 14 m',
+          },
+          {
+            item: 'Maximum Drive Speed',
+            value: '4 km/h',
+          },
+          {
+            item: 'Batteries',
+            value: 'Rechargeable 6V',
+          },
+          {
+            item: 'Battery Quantity',
+            value: '4 batteries',
+          },
+        ],
+      },
+    },
+    {
+      categoryId: "compactor",
+      value: {
+        machineId: "SCMID001",
+        title: "Stationary Compactor",
+        description:
+          "Expertly crafted, our Bunded tanks ensure the secure storage and transportation of diesel fuel. These tanks function as auxiliary fuel sources, effectively fueling many engines and additional equipment via a dedicated pump. All enclosed within a lockable access hatch for maximum safety.",
+        features: [
+          {
+            image: temp,
+            title: "On-site Fuel Supply",
+            description:
+              "The Bunded tank range offers the perfect solution for short-term on-site fuel storage needs",
+          },
+          {
+            image: insulation,
+            title: "Generator and Auxilliary Equipment",
+            description:
+              " The Bunded tank can simultaneously connect to a diesel-powered piece of equipment and dispense fuel through a pump.",
+          },
+          {
+            image: voltage,
+            title: "Fleet Refuelling",
+            description:
+              "Fleet refueling becomes seamless with the Bunded tank, minimizing downtime in remote locations or on your site",
+          },
+        ],
+        specification: [
+          {
+            item: 'Product',
+            value: 'Stationary Compactor',
+          },
+          {
+            item: 'Models',
+            value: 'TC 16, TC 18, TC 20, TC 22',
+          },
+          {
+            item: 'Capacities (m3)',
+            value: '16m3 – 18m3 – 20 m3 – 22 m3 ',
+          },
+          {
+            item: 'Motor Power',
+            value: '7.5 kW',
+          },
+          {
+            item: 'Filling Height ',
+            value: '1380 mm',
+          },
+          {
+            item: 'Press Force',
+            value: '340 kN',
           },
         ],
       },

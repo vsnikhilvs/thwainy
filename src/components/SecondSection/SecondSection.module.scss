@@ -3,167 +3,181 @@
 @import "/src/styles/breakpoints";
 
 .container {
-  background: #f1f1f1;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-
-  .wedge {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-
-  .mainSection {
-    padding-right: 2rem;
+    background: #f1f1f1;
+    height: 100vh;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: calc(100vw - 10%);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 
-    .titleText {
-      @extend .title;
-      color: black;
+    .wedge {
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 
-    .descriptionText {
-      @extend .description;
-      color: black;
-    }
-
-    .brochureButton {
-      border-radius: 0;
-      border-color: white;
-      background-color: $primaryColor;
-      color: white;
-      width: fit-content;
-    }
-
-    .carouselItem {
-      width: 100%;
-      display: flex !important;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-
-      .carouselImage {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        overflow: hidden;
-
-        .carouselItemImage {
-          width: 250px;
-          height: 250px;
-        }
-      }
-
-      .carouselContent {
-        padding: 0 0.5rem;
-        width: 80%;
+    .mainSection {
+        padding-right: 2rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        width: calc(100vw - 10%);
 
-        .carouselTitle {
-          @extend .carouseltitle;
-          color: black;
+        .titleText {
+            @extend .title;
+            color: black;
         }
 
-        .carouselDescription {
-          @extend .carouseldescription;
-          color: black;
+        .descriptionText {
+            @extend .description;
+            color: black;
         }
 
-        .carouselFeatures {
-          color: black;
-          display: flex;
-          flex-wrap: wrap;
-          align-items: flex-start;
-          gap: 1rem;
+        .brochureButton {
+            border-radius: 0;
+            border-color: white;
+            background-color: $primaryColor;
+            color: white;
+            width: fit-content;
+            width: 100%;
+            max-width: 200px;
+        }
 
-          .carouselFeatureItem {
-            display: flex;
+        .downloadButton {
+            border-radius: 0;
+            border-color: $primaryColor;
+            color: $primaryColor;
+            width: fit-content;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .carouselItem {
+            width: 100%;
+            display: flex !important;
             flex-direction: column;
-            align-items: flex-start;
-            min-width: 15rem;
+            align-items: center;
+            gap: 1rem;
 
-            .carouselFeatureTitle {
-              @extend .subtitle;
+            .carouselImage {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                overflow: hidden;
+
+                .carouselItemImage {
+                    width: 250px;
+                    height: 250px;
+                }
             }
 
-            .carouselFeatureDescription {
-              @extend .subdescription;
+            .carouselContent {
+                padding: 0.25rem 0.5rem;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                .carouselTitle {
+                    @extend .carouseltitle;
+                    text-align: center;
+                    color: black;
+                }
+
+                .carouselDescription {
+                    @extend .carouseldescription;
+                    text-align: center;
+                    color: black;
+                }
+
+                .carouselFeatures {
+                    color: black;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    gap: 1rem;
+
+                    .carouselFeatureItem {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        min-width: 15rem;
+
+                        .carouselFeatureTitle {
+                            @extend .subtitle;
+                        }
+
+                        .carouselFeatureDescription {
+                            @extend .subdescription;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 }
 
 @include md {
-  .container {
-    .mainSection {
-      .carouselItem {
-        gap: 0;
-        .carouselImage {
-          width: 100%;
-          .carouselItemImage {
-            width: 350px;
-            height: 350px;
-          }
+    .container {
+        .mainSection {
+            .carouselItem {
+                gap: 0;
+                .carouselImage {
+                    width: 100%;
+                    .carouselItemImage {
+                        width: 350px;
+                        height: 350px;
+                    }
+                }
+                .carouselContent {
+                    width: 80%;
+                }
+            }
         }
-        .carouselContent {
-          width: 80%;
-        }
-      }
     }
-  }
 }
 
 @include lg {
-  .container {
-    .mainSection {
-      padding-right: 0;
-      .carouselItem {
-        flex-direction: row;
-        .carouselImage {
-          width: 50%;
-          .carouselItemImage {
-            width: 350px;
-            height: 350px;
-          }
-        }
-        .carouselContent {
-          width: 50%;
+    .container {
+        .mainSection {
+            padding-right: 0;
+            .carouselItem {
+                flex-direction: row;
+                .carouselImage {
+                    width: 40%;
+                    .carouselItemImage {
+                        width: 350px;
+                        height: 350px;
+                    }
+                }
+                .carouselContent {
+                    width: 50%;
 
-          .carouselFeatures {
-            .carouselFeatureItem {
-              max-width: 25rem;
+                    .carouselFeatures {
+                        .carouselFeatureItem {
+                            max-width: 25rem;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 }
 
 @include xl {
-  .container {
-    .mainSection {
-      .carouselItem {
-        .carouselImage {
-          .carouselItemImage {
-            width: 400px;
-            height: 400px;
-          }
+    .container {
+        .mainSection {
+            .carouselItem {
+                .carouselImage {
+                    .carouselItemImage {
+                        width: 400px;
+                        height: 400px;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }

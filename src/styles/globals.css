@@ -139,15 +139,23 @@ a {
 .react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
   min-width: 25px !important;
   min-height: 25px !important;
+  background: transparent;
 }
 
 .react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
   min-width: 25px !important;
   min-height: 25px !important;
+  background: transparent;
+}
+
+.react-multiple-carousel__arrow::before {
+  color: #223a5c !important;
 }
 
 .MuiAppBar-root {
-  background-color: transparent;
+  background-color: #223a5c;
+  width: 100% !important;
+  box-shadow: none !important;
 }
 
 .MuiToolbar-root {
@@ -156,4 +164,8 @@ a {
 
 .MuiDrawer-paper {
   background-color: #223a5c;
+}
+
+.MuiButtonBase-root.MuiTab-root {
+  min-width: 12rem !important;
 }

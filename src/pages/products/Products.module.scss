@@ -10,15 +10,19 @@
 
 
     .bannerSection {
+      min-height: 25rem;
+      background-position: center;
+      background-size: cover;
       .machineBanner {
         width: calc(100vw - 2rem);
         height: calc((100vh - 9rem) / 2);
       }
 
       .bannerLiterals {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
+        align-items: flex-start;
+        justify-content: center;
+        height: 25rem;
+        padding-left: 2rem;
         color: black;
         display: flex;
         flex-direction: column;
@@ -45,13 +49,14 @@
     }
 
     .featureSection {
-      margin-top: 1rem;
+      margin-top: 2rem;
       color: black;
       display: flex;
       flex-direction: column;
       gap: 1rem;
 
       .featureMainTitle {
+        margin-bottom: 1rem;
         @extend .title;
       }
 
@@ -72,7 +77,7 @@
 
             .ftTitle {
               font-weight: 600;
-              @extend .carouseltitle;
+              @extend .featureTitle;
             }
 
             .ftDescription {
@@ -80,6 +85,45 @@
             }
           }
         }
+      }
+    }
+
+    .tableSection {
+      margin: 2rem 0;
+      min-height: 35rem;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 2rem;
+      padding-left: 2rem;
+      .specHeader {
+        color: black;
+        @extend .specHeader;
+      }
+      .specTable {
+        color: black;
+        border-spacing: 0;
+        .firstColumn {
+          font-weight: 700;
+          padding: 0.5rem;
+          border: 1px solid grey;
+        }
+        .valueColumn {
+          padding: 0.5rem;
+          max-width: 25rem;
+          border: 1px solid grey;
+        }
+      }
+      .brochureButton {
+        border-radius: 0;
+        border-color: $primaryColor;
+        background-color: white;
+        color: $primaryColor;
+        width: fit-content;
+        font-size: 20px;
       }
     }
   }
@@ -152,7 +196,7 @@
       .featureSection {
         .features {
           .featureItem {
-            max-width: 22rem;
+            max-width: 25rem;
           }
         }
       }
@@ -172,13 +216,6 @@
           top: 2rem;
           left: 2rem;
           max-width: 60rem;
-        }
-      }
-      .featureSection {
-        .features {
-          .featureItem {
-            max-width: 25rem;
-          }
         }
       }
     }
