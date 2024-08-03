@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout/Layout";
 import styles from "./Products.module.scss";
 import { constants } from "@/constants/products/constants";
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import { Tabs, Tab, Button } from "@mui/material";
 import Image from "next/image";
 import ThermoIcon from "@/assets/icons/ThermoIcon";
@@ -16,7 +16,9 @@ const Products = () => {
       <div className={styles.container}>
         <Tabs value={tab} onChange={handleChange} scrollButtons="auto" variant="scrollable">
           {constants.categories.map((c) => (
-            <Tab key={c.categoryId} icon={<ThermoIcon />} iconPosition="start" label={c.title} id={c.categoryId} />
+            <Tab key={c.categoryId} icon={c.icon} iconPosition="start" 
+              label={c.title} id={c.categoryId} className={styles.tabStyle} 
+            />
           ))}
         </Tabs>
         {constants.data.map((d, index) => (

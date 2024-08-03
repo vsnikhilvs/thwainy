@@ -1,28 +1,39 @@
 import temp from "@/assets/temp.svg";
 import insulation from "@/assets/insulation.svg";
 import voltage from "@/assets/voltage.svg";
+import canopy_icon from "@/assets/icons/CanopyIcon"
+import compactor_icon from "@/assets/icons/CompactorIcon"
+import compressor_icon from "@/assets/icons/CompressorIcon"
+import generator_icon from "@/assets/icons/GeneratorIcon"
+import lift_icon from "@/assets/icons/LiftIcon"
+import tank_icon from "@/assets/icons/TankIcon"
 
 export const constants = {
   categories: [
     {
       categoryId: "generators",
       title: "Generators",
+      icon: generator_icon,
     },
     {
       categoryId: "screwcompressor",
       title: "Screw Compressor",
+      icon: canopy_icon,
     },
     {
       categoryId: "gripper",
       title: "Gripper",
+      icon: compressor_icon,
     },
     {
       categoryId: "scissorlift",
       title: "Electric Scissor Lift",
+      icon: lift_icon,
     },
     {
       categoryId: "compactor",
       title: "Stationary Compactor",
+      icon: compactor_icon,
     },
   ],
   data: [

@@ -5,6 +5,12 @@
 .container {
   padding: 0 1rem 2rem 1rem;
 
+  .tabStyle {
+    svg {
+      width: 35px;
+    }
+  }
+
   .machineTab {
     position: relative;
 
