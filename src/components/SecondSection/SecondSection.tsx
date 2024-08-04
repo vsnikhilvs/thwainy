@@ -37,18 +37,6 @@ const SecondSection = () => {
                                 <span className={styles.carouselDescription}>
                                     {c.description}
                                 </span>
-                                {/* <div className={styles.carouselFeatures}>
-                  {c.features.map((f, i) => (
-                    <div key={i} className={styles.carouselFeatureItem}>
-                      <span className={styles.carouselFeatureTitle}>
-                        {f.title}
-                      </span>
-                      <span className={styles.carouselFeatureDescription}>
-                        {f.description}
-                      </span>
-                    </div>
-                  ))}
-                </div> */}
                                 <Button
                                     variant="contained"
                                     className={styles.brochureButton}

@@ -13,12 +13,12 @@ export const constants = {
     {
       categoryId: "generators",
       title: "Generators",
-      icon: generator_icon,
+      icon: canopy_icon,
     },
     {
       categoryId: "screwcompressor",
       title: "Screw Compressor",
-      icon: canopy_icon,
+      icon: generator_icon,
     },
     {
       categoryId: "gripper",

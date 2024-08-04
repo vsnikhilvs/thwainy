@@ -1,16 +1,26 @@
 import Layout from "@/components/Layout/Layout";
 import styles from "./Products.module.scss";
 import { constants } from "@/constants/products/constants";
-import { ReactElement, useState } from "react";
+import {  useEffect, useState } from "react";
 import { Tabs, Tab, Button } from "@mui/material";
 import Image from "next/image";
-import ThermoIcon from "@/assets/icons/ThermoIcon";
 
 const Products = () => {
+  const [width, setWidth] = useState(0);
   const [tab, setTab] = useState(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setTab(newValue);
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth)
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <Layout>
       <div className={styles.container}>
@@ -28,7 +38,8 @@ const Products = () => {
             hidden={tab !== index}
             id={d.categoryId}
           >
-            <div className={styles.bannerSection} style={{
+            <div className={styles.bannerSection + " " + d.categoryId} 
+            style={{
               backgroundImage: `url(/${
                 d.categoryId === 'generators' ? 
                 'generator' : 
@@ -41,7 +52,8 @@ const Products = () => {
                 d.categoryId === 'compactor' ?
                 'tank' : 
                 'generators'}.jpg)`
-                }}>
+                }}
+              >
               <div className={styles.bannerLiterals}>
                 <span className={styles.bannerTitle}>{d.value.title}</span>
                 <span className={styles.bannerDesc}>{d.value.description}</span>
@@ -66,10 +78,11 @@ const Products = () => {
                 ))}
               </div>
             </div>
-            <div className={styles.tableSection} style={{
-              backgroundImage: `url(/${
+            <div className={styles.tableSection} 
+            style={{
+              backgroundImage: width >= 1280 ? `url(/${
                 d.categoryId === 'generators' ? 
-                'generator_spec' : 
+                'canopy_spec' : 
                 d.categoryId === 'screwcompressor' ?
                 'canopy_spec' : 
                 d.categoryId === 'gripper' ?
@@ -78,8 +91,9 @@ const Products = () => {
                 'lift_spec' : 
                 d.categoryId === 'compactor' ?
                 'tank_spec' : 
-                'generators'}.jpg)`
-                }}>
+                'generators'}.jpg)` : 'none'
+                }}
+              >
               <div className={styles.specHeader}>{'Specifications'}</div>
               <table className={styles.specTable}>
                 {d.value.specification.map(s => (
@@ -89,6 +103,16 @@ const Products = () => {
                   </tr>
                 ))}
               </table>
+              {d.value.options && (
+                <div className={styles.optionSection}>
+                  <div className={styles.optionTitle}>{'Options'}</div>
+                  <ul className={styles.optionList}>
+                    {d.value.options.map((o, i) => (
+                      <li key={i} className={styles.optionListItem}>{o}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <Button variant="outlined" className={styles.brochureButton}>
                 Download Brochure
               </Button>

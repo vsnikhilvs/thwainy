@@ -131,6 +131,16 @@
         width: fit-content;
         font-size: 20px;
       }
+      .optionSection {
+        color: black;
+        .optionTitle {
+          @extend .featureTitle;
+          margin-bottom: 1rem;
+        }
+        .optionList {
+          padding-left: 1rem;
+        }
+      }
     }
   }
 }
@@ -179,6 +189,7 @@
         }
       }
       .featureSection {
+        padding-left: 2rem;
         .features {
           gap: 2rem;
           .featureItem {
