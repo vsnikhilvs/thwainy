@@ -103,6 +103,10 @@ const Products = () => {
                   </tr>
                 ))}
               </table>
+              <Button variant="outlined" className={styles.brochureButton}>
+                Download Brochure
+              </Button>
+              </div>
               {d.value.options && (
                 <div className={styles.optionSection}>
                   <div className={styles.optionTitle}>{'Options'}</div>
@@ -113,10 +117,6 @@ const Products = () => {
                   </ul>
                 </div>
               )}
-              <Button variant="outlined" className={styles.brochureButton}>
-                Download Brochure
-              </Button>
-            </div>
           </div>
         ))}
       </div>

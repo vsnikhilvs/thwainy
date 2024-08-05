@@ -49,7 +49,7 @@ export const constants = {
             image: temp,
             title: "Reliability",
             description:
-              "Achieves a 900 temperature rise at 400 ambient conditions.",
+              "It achieves 90 degrees at 40 degrees ambient conditions.",
           },
           {
             image: insulation,
@@ -70,7 +70,7 @@ export const constants = {
           },
           {
             item: 'Models',
-            value: 'THWAINY–EP–15kVA, THWAINY–EP–600kVA',
+            value: 'THWAINY–EP–15kVA upto THWAINY–EP–600kVA',
           },
           {
             item: 'Capacities (Continuous kVA)',
@@ -135,42 +135,31 @@ export const constants = {
         specification: [
           {
             item: 'Product',
-            value: 'Screw Compressor',
+            value: 'Thwainy - SC',
           },
           {
             item: 'Models',
-            value: 'THWAINY–EP–15kVA, THWAINY–EP–600kVA',
+            value: 'THWAINY–SSC, THWAINY–PSC',
           },
           {
-            item: 'Capacities (Continuous kVA)',
-            value: '15 – 20 – 25 – 35 – 45 – 50 – 60 – 75 – 100 – 125 – 150 – 200 – 300 – 400 – 500 – 600',
+            item: 'Pressure',
+            value: '5 - 15 Bar',
           },
           {
-            item: 'Voltage',
-            value: '190～220/190～240V, 380～440/380～480V',
+            item: 'Flow rate',
+            value: '0.8 - 14.2 m3',
           },
           {
-            item: 'Power Factor',
-            value: 'Three Phase 0.8 Power Factor',
-          },
-          {
-            item: 'Engine',
-            value: 'Moteurs Baudouin',
-          },
-          {
-            item: 'Alternator',
-            value: 'Yanan',
-          },
-          {
-            item: 'Sound',
-            value: '50Hz - 60dB, 60Hz - 63dB',
+            item: 'Power',
+            value: '15 - 90 kW',
           },
         ],
         options: [
-          'Intermediate models can be provided upon request',
-          'Greater capacities can be provided upon request',
-          'Automatic Transfer Switch',
-          'Block Heaters',
+          'Interated dryer can be provided upon request',
+          'Variable Frequency Drive can be provided upon request',
+          'Food grade lubricants can be provided upon request',
+          'Post Filtration Systems can be provided upon request',
+          'Remote starting can be provided upon request',
         ]
       },
     },
@@ -207,32 +196,32 @@ export const constants = {
             value: 'Gripper',
           },
           {
-            item: 'Power',
-            value: '8.5 kW',
+            item: 'Top maximum width',
+            value: '1220 - 1850 mm',
           },
           {
-            item: 'Volume per Stroke',
-            value: '1.15 m3',
+            item: 'Distance between jaws',
+            value: '780 - 1400 mm',
           },
           {
-            item: 'Volume per Hour',
-            value: '95 m3  (Theoretical)',
+            item: 'Outer height',
+            value: '1090 - 1510 mm',
           },
           {
-            item: 'Cycle Time',
-            value: '51 seconds (Average)',
+            item: 'Inner height',
+            value: '780 - 1208 mm',
           },
           {
-            item: 'Penetration Depth',
-            value: '420 mm',
+            item: 'Jaw length',
+            value: '1200 mm',
           },
           {
-            item: 'Filling Opening',
-            value: '960 x 1860 mm (bottom), 1470 x 1860 mm (top)',
+            item: 'Maximum load',
+            value: '2000 kg',
           },
           {
-            item: 'Filling Height',
-            value: '1400 mm',
+            item: 'Clamp weight',
+            value: '325 kg (average)',
           },
         ],
       },
@@ -243,25 +232,25 @@ export const constants = {
         machineId: "SLID001",
         title: "Electric Scissor Lift",
         description:
-          "Expertly crafted, our Bunded tanks ensure the secure storage and transportation of diesel fuel. These tanks function as auxiliary fuel sources, effectively fueling many engines and additional equipment via a dedicated pump. All enclosed within a lockable access hatch for maximum safety.",
+          "Robust platforms offering great manoeuvrability and maximum versatility for working indoors and outdoors, on construction sites, for fitting out or carrying out maintenance work",
         features: [
           {
             image: temp,
-            title: "On-site Fuel Supply",
+            title: "Access Heights",
             description:
-              "The Bunded tank range offers the perfect solution for short-term on-site fuel storage needs",
+              "Scissor lifts can go up to 32 feet in height, allows your workers to reach spots that would have otherwise been very hard to get to",
           },
           {
             image: insulation,
-            title: "Generator and Auxilliary Equipment",
+            title: "Ease of Use",
             description:
-              " The Bunded tank can simultaneously connect to a diesel-powered piece of equipment and dispense fuel through a pump.",
+              "Easy to operate, simple and literally foolproof, decreases the tiredness of operators",
           },
           {
             image: voltage,
-            title: "Fleet Refuelling",
+            title: "Easily Customizable",
             description:
-              "Fleet refueling becomes seamless with the Bunded tank, minimizing downtime in remote locations or on your site",
+              "You can fit yours with tilters to minimize falling risk for the operator, fit it with a turntable that allows it to rotate in addition to lifting",
           },
         ],
         specification: [
@@ -298,25 +287,25 @@ export const constants = {
         machineId: "SCMID001",
         title: "Stationary Compactor",
         description:
-          "Expertly crafted, our Bunded tanks ensure the secure storage and transportation of diesel fuel. These tanks function as auxiliary fuel sources, effectively fueling many engines and additional equipment via a dedicated pump. All enclosed within a lockable access hatch for maximum safety.",
+          "Designed to be fixed waste management devices, our stationary compactors are ideal for handling dry waste like cardboard, paper, and other non-organic materials, making them a popular choice for retail outlets, manufacturing facilities, and offices.",
         features: [
           {
             image: temp,
-            title: "On-site Fuel Supply",
+            title: "Waste volume reduction",
             description:
-              "The Bunded tank range offers the perfect solution for short-term on-site fuel storage needs",
+              "They can reduce the volume of waste by up to 75%, making waste management more efficient and less frequent",
           },
           {
             image: insulation,
-            title: "Generator and Auxilliary Equipment",
+            title: "Cost-Effectiveness",
             description:
-              " The Bunded tank can simultaneously connect to a diesel-powered piece of equipment and dispense fuel through a pump.",
+              "Reduced waste volume means fewer trips for disposal, which translates to lower hauling fees",
           },
           {
             image: voltage,
-            title: "Fleet Refuelling",
+            title: "Environmental Benefits",
             description:
-              "Fleet refueling becomes seamless with the Bunded tank, minimizing downtime in remote locations or on your site",
+              "By minimizing waste volume, stationary compactors help reduce the carbon footprint associated with waste transport",
           },
         ],
         specification: [
@@ -325,26 +314,54 @@ export const constants = {
             value: 'Stationary Compactor',
           },
           {
-            item: 'Models',
-            value: 'TC 16, TC 18, TC 20, TC 22',
+            item: 'Power',
+            value: '8.5 kW',
           },
           {
-            item: 'Capacities (m3)',
-            value: '16m3 – 18m3 – 20 m3 – 22 m3 ',
-          },
-          {
-            item: 'Motor Power',
-            value: '7.5 kW',
-          },
-          {
-            item: 'Filling Height ',
-            value: '1380 mm',
-          },
-          {
-            item: 'Press Force',
+            item: 'Compaction Force',
             value: '340 kN',
           },
+          {
+            item: 'Volume per stroke',
+            value: '1.15 m3',
+          },
+          {
+            item: 'Volume per hour ',
+            value: '95 m3 (theoretical)',
+          },
+          {
+            item: 'Cycle time',
+            value: '51 seconds (average)',
+          },
+          {
+            item: 'Penetration Depth',
+            value: '420 mm',
+          },
+          {
+            item: 'Filling opening',
+            value: '960 x 1860 mm (bottom)',
+          },
+          {
+            item: 'Filling opening',
+            value: '1470 x 1860 mm (top)',
+          },
+          {
+            item: 'Filling height',
+            value: '1400 mm',
+          },
         ],
+        options: [
+          'Lid light on top of filling opening.',
+          'Remote controls with 3 metres cable length.',
+          'Phase inverter.',
+          'Pendulum steel scraper.',
+          'Hopper height extensions.',
+          'Extra hook-lift systems.',
+          'Extra front rollers.',
+          'Fold-down hook at the filling opening.',
+          'Container lifting system.',
+          'Leach component.',
+        ]
       },
     },
   ],
