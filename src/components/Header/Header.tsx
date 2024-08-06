@@ -15,8 +15,6 @@ import {
     List,
     ListItem,
     ListItemButton,
-    ListItemText,
-    Paper,
     Popper,
     PopperPlacementType,
     Toolbar,
@@ -26,12 +24,11 @@ import React, { useEffect } from "react";
 import { Menu } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
 
-const drawerWidth = 200;
 const navItems = [
     { name: "Home", url: "/" },
     { name: "About", url: "/about" },
     { name: "Products", url: "/products" },
-    { name: "News", url: "/" },
+    { name: "News", url: "/news" },
     { name: "Contact Us", url: "/contact" },
 ];
 
@@ -151,7 +148,7 @@ const Header = () => {
                             display: { xs: "block", sm: "none" },
                             "& .MuiDrawer-paper": {
                                 boxSizing: "border-box",
-                                width: drawerWidth,
+                                width: '50%',
                             },
                         }}
                     >

@@ -45,6 +45,7 @@
         }
 
         .brochureButton {
+          margin-top: 1rem;
           border-radius: 0;
           border-color: white;
           background-color: $primaryColor;
@@ -126,7 +127,6 @@
       .brochureButton {
         border-radius: 0;
         border-color: $primaryColor;
-        background-color: white;
         color: $primaryColor;
         width: fit-content;
         font-size: 20px;

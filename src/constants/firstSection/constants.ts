@@ -1,6 +1,8 @@
-import compactor from "@/assets/home/compactor.png";
-import generator from "@/assets/home/generator.png";
-import scissorlift from "@/assets/home/scissorlift.png";
+import compactor from "@/assets/compactor_gif.gif";
+import generator from "@/assets/generator_gif.gif";
+import lift from "@/assets/lift_gif.gif";
+import gripper from "@/assets/gripper_gif.gif";
+import screwcompressor from "@/assets/screwcompressor_gif.gif";
 
 export const constants = {
   title: "Powering Progress, Building the Future",
@@ -17,7 +19,7 @@ export const constants = {
     },
     {
       itemAltText: "scissorlift Image",
-      image: scissorlift,
+      image: lift,
       title: "Scissor Lift",
       description:
         "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
@@ -27,6 +29,22 @@ export const constants = {
       itemAltText: "Generator Image",
       image: generator,
       title: "Generators and Canopies",
+      description:
+        "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
+      buttonText: "Know More",
+    },
+    {
+      itemAltText: "Gripper Image",
+      image: gripper,
+      title: "Gripper",
+      description:
+        "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
+      buttonText: "Know More",
+    },
+    {
+      itemAltText: "screw compressor Image",
+      image: screwcompressor,
+      title: "Screw Compressor",
       description:
         "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
       buttonText: "Know More",

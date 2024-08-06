@@ -22,14 +22,6 @@
     align-items: center;
     justify-content: space-between;
 
-    .activeMenu {
-      @extend .header-bold;
-    }
-
-    .inActiveMenu {
-      @extend .header;
-    }
-
     .menuSection {
       ul {
         display: flex;
@@ -108,11 +100,18 @@
 .activeMenu {
   @extend .header-bold;
   color: white;
+  &:hover {
+    color: steelblue !important;
+  }
 }
 
 .inActiveMenu {
   @extend .header;
+  font-weight: 200;
   color: white;
+  &:hover {
+    color: steelblue !important;
+  }
 }
 
 @include md {

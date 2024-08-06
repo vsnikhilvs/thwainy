@@ -169,25 +169,25 @@ export const constants = {
         machineId: "GRID001",
         title: "Gripper",
         description:
-          "Expertly crafted, our Bunded tanks ensure the secure storage and transportation of diesel fuel. These tanks function as auxiliary fuel sources, effectively fueling many engines and additional equipment via a dedicated pump. All enclosed within a lockable access hatch for maximum safety.",
+          "The ultimate tool for handling blocks with ease. Its ergonomic design ensures a secure grip, reducing strain and increasing efficiency. Ideal for construction and landscaping. Thwainy industries' Block Gripper is durable, lightweight and versatile. Make your block-lifting tasks safer and faster with Thwainy Industries' Block Gripper",
         features: [
           {
             image: temp,
-            title: "On-site Fuel Supply",
+            title: "Reliability",
             description:
-              "The Bunded tank range offers the perfect solution for short-term on-site fuel storage needs",
+              "Designed to be highly reliable and robust",
           },
           {
             image: insulation,
-            title: "Generator and Auxilliary Equipment",
+            title: "Compatibility",
             description:
-              " The Bunded tank can simultaneously connect to a diesel-powered piece of equipment and dispense fuel through a pump.",
+              "Sturdy gripper systems suitable for handling a wide range of parts",
           },
           {
             image: voltage,
-            title: "Fleet Refuelling",
+            title: "Maintainability",
             description:
-              "Fleet refueling becomes seamless with the Bunded tank, minimizing downtime in remote locations or on your site",
+              "Easy to maintain, saving cost and time for the upcoming uses",
           },
         ],
         specification: [

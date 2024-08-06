@@ -44,13 +44,13 @@ const Products = () => {
                 d.categoryId === 'generators' ? 
                 'generator' : 
                 d.categoryId === 'screwcompressor' ?
-                'canopy' : 
+                'screwcompressor' : 
                 d.categoryId === 'gripper' ?
                 'gripper' : 
                 d.categoryId === 'scissorlift' ?
                 'lift' : 
                 d.categoryId === 'compactor' ?
-                'tank' : 
+                'compactor' : 
                 'generators'}.jpg)`
                 }}
               >
@@ -82,15 +82,15 @@ const Products = () => {
             style={{
               backgroundImage: width >= 1280 ? `url(/${
                 d.categoryId === 'generators' ? 
-                'canopy_spec' : 
+                'generator_spec' : 
                 d.categoryId === 'screwcompressor' ?
-                'canopy_spec' : 
+                'screwcompressor_spec' : 
                 d.categoryId === 'gripper' ?
                 'gripper_spec' : 
                 d.categoryId === 'scissorlift' ?
                 'lift_spec' : 
                 d.categoryId === 'compactor' ?
-                'tank_spec' : 
+                'compactor_spec' : 
                 'generators'}.jpg)` : 'none'
                 }}
               >

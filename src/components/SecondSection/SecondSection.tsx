@@ -1,8 +1,6 @@
 import Image from "next/image";
 import styles from "./SecondSection.module.scss";
-import Wedge from "@/assets/wedge.svg";
 import { Button } from "@mui/material";
-import bunded from "@/assets/bunded.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { carouselConfig } from "@/constants/carousel/constants";
@@ -11,7 +9,6 @@ import { constants } from "@/constants/secondSection/constants";
 const SecondSection = () => {
     return (
         <div className={styles.container}>
-            <Image src={Wedge} alt="Wedge image" className={styles.wedge} />
             <div className={styles.mainSection}>
                 <Carousel
                     className=""

@@ -12,7 +12,12 @@ const FirstSection = () => {
     <div className={styles.container}>
       <Image src={Wedge} alt="Wedge image" className={styles.wedge} />
       <div className={styles.mainSection}>
-        <span className={styles.titleText}>{constants.title}</span>
+        <span className={styles.titleText}>
+          {constants.title.split(', ')[0] + ','}
+        </span>
+        <span className={styles.titleText}>
+          {constants.title.split(', ')[1]}
+        </span>
         <span className={styles.descriptionText}>{constants.description}</span>
         <Button variant={"contained"} className={styles.brochureButton}>
           {constants.downloadBrochureButtonText}

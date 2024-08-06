@@ -3,6 +3,7 @@
 @import "/src/styles/breakpoints";
 
 .container {
+  overflow: hidden;
   background: white;
   height: calc(100vh - 12.25rem);
   position: relative;
@@ -16,6 +17,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 1.5rem;
+    height: auto;
   }
 
   .brochureButton {
@@ -130,6 +133,10 @@
 
 @include md {
   .container {
+    .wedge {
+      width: 2.5rem;
+      height: auto;
+    }
     .mainSection {
       padding: 0;
       max-width: 40rem;
@@ -160,6 +167,10 @@
     gap: 2rem;
     padding: 0 4rem;
     flex-direction: row;
+    .wedge {
+      width: 4.5rem;
+      height: auto;
+    }
     .mainSection {
       max-width: 20rem;
       gap: 1rem;
@@ -192,17 +203,28 @@
 @include xl {
   .container {
     flex-direction: row;
+    .wedge {
+      width: 6.5rem;
+      height: auto;
+    }
     .mainSection {
       max-width: 30rem;
     }
     .mainSectionRight {
-      .carouselImage {
-        width: 45rem;
-        height: 100%;
-        object-fit: cover;
+      .imageSection {
+        .carouselImage {
+          height: 18rem;
+          object-fit: cover;
+        }
       }
       .carouselContent {
         width: 35rem;
+        .carouselTitle {
+          font-size: 22px;
+        }
+        .carouselDescription {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -215,13 +237,20 @@
     }
     .mainSectionRight {
       max-width: 50rem;
-      .carouselImage {
-        width: 750px;
-        height: 100%;
-        object-fit: cover;
+      .imageSection {
+        .carouselImage {
+          height: 30rem;
+          object-fit: cover;
+        }
       }
       .carouselContent {
         width: 45rem;
+        .carouselTitle {
+          font-size: 26px;
+        }
+        .carouselDescription {
+          font-size: 22px;
+        }
       }
     }
   }
