@@ -57,6 +57,7 @@
 }
 
 .subContainer {
+  width: 100%;
   height: 3.125rem;
   background: $secondaryColor;
   display: flex;
@@ -112,6 +113,10 @@
   &:hover {
     color: steelblue !important;
   }
+}
+
+.secondButtons {
+  text-align: left;
 }
 
 @include md {

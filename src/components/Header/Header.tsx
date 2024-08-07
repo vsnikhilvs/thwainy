@@ -43,8 +43,13 @@ const Header = () => {
     const [container, setContainer] = React.useState<HTMLElement | undefined>(
         undefined
     );
-    const handleDrawerToggle = () => {
-        setMobileOpen((prevState) => !prevState);
+    const handleDrawerToggle = (e: any) => {
+        if(e?.target?.textContent === 'Power'
+            || e?.target?.textContent === 'City Cleaning'
+            || e?.target?.textContent === 'Maintenance'
+        ) {
+            return
+        } else setMobileOpen((prevState) => !prevState);
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -69,6 +74,29 @@ const Header = () => {
                         </ListItemButton>
                     </ListItem>
                 ))}
+                <Divider/>
+                <Divider/>
+                <ListItem disablePadding>
+                    <ListItemButton sx={{ textAlign: "center" }}>
+                        <span className={styles.inActiveMenu + ' ' + styles.secondButtons}>
+                            {'Power'}
+                        </span>
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton sx={{ textAlign: "center" }}>
+                        <span className={styles.inActiveMenu + ' ' + styles.secondButtons}>
+                            {'City Cleaning'}
+                        </span>
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton sx={{ textAlign: "center" }}>
+                        <span className={styles.inActiveMenu + ' ' + styles.secondButtons}>
+                            {'Maintenance'}
+                        </span>
+                    </ListItemButton>
+                </ListItem>
             </List>
         </Box>
     );
@@ -156,29 +184,35 @@ const Header = () => {
                     </Drawer>
                 </nav>
             </div>
-            <div className={styles.subContainer}>
-                <Button
-                    variant="text"
-                    className={styles.subMenuButton}
-                    onClick={handleClick("bottom")}
-                >
-                    Power
-                </Button>
-                <Button
-                    variant="text"
-                    className={styles.subMenuButton}
-                    onClick={handleClick("bottom")}
-                >
-                    City Cleaning
-                </Button>
-                <Button
-                    variant="text"
-                    className={styles.subMenuButton}
-                    onClick={handleClick("bottom")}
-                >
-                    Maintenance & Construction
-                </Button>
-            </div>
+            <Box
+                sx={{
+                    display: { xs: "none", sm: "flex" },
+                }}
+            >    
+                <div className={styles.subContainer}>
+                    <Button
+                        variant="text"
+                        className={styles.subMenuButton}
+                        onClick={handleClick("bottom")}
+                    >
+                        Power
+                    </Button>
+                    <Button
+                        variant="text"
+                        className={styles.subMenuButton}
+                        onClick={handleClick("bottom")}
+                    >
+                        City Cleaning
+                    </Button>
+                    <Button
+                        variant="text"
+                        className={styles.subMenuButton}
+                        onClick={handleClick("bottom")}
+                    >
+                        Maintenance & Construction
+                    </Button>
+                </div>
+            </Box>
             <Popper
                 sx={{ zIndex: 1200 }}
                 open={open}
