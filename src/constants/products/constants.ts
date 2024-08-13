@@ -4,9 +4,8 @@ import voltage from "@/assets/voltage.svg";
 import canopy_icon from "@/assets/icons/CanopyIcon"
 import compactor_icon from "@/assets/icons/CompactorIcon"
 import compressor_icon from "@/assets/icons/CompressorIcon"
-import generator_icon from "@/assets/icons/GeneratorIcon"
+import gripper_icon from "@/assets/icons/GripeerIcon"
 import lift_icon from "@/assets/icons/LiftIcon"
-import tank_icon from "@/assets/icons/TankIcon"
 
 export const constants = {
   categories: [
@@ -18,12 +17,12 @@ export const constants = {
     {
       categoryId: "screwcompressor",
       title: "Screw Compressor",
-      icon: generator_icon,
+      icon: compressor_icon,
     },
     {
       categoryId: "gripper",
       title: "Gripper",
-      icon: compressor_icon,
+      icon: gripper_icon,
     },
     {
       categoryId: "scissorlift",
@@ -111,7 +110,7 @@ export const constants = {
         machineId: "SCID001",
         title: "Screw Compressor",
         description:
-          "Discover the convenience of our generator canopies available for sale. Whether it's for events, construction sites, or short-term projects, our reliable and well-maintained canopies provide hassle-free access to enhance your operations.",
+          "With high-end designs, advanced features, and technologies that offer cost-effective, long-lasting, reliable, and premium compressed air solutions suitable for light to heavy-duty industrial applications",
         features: [
           {
             image: temp,

@@ -16,6 +16,16 @@ export const constants = {
       description:
         "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
       buttonText: "Know More",
+      information: [
+        'Unrivaled performance',
+        'Leakage free',
+        'Low Area Footprint',
+      ],
+      versions: [
+        'SL-16',
+        'SL-18',
+        'SL-20'
+      ]
     },
     {
       itemAltText: "scissorlift Image",
@@ -24,6 +34,15 @@ export const constants = {
       description:
         "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
       buttonText: "Know More",
+      information: [
+        'Modular',
+        'Efficient',
+        'Environment Friendly',
+      ],
+      versions: [
+        'SL-12',
+        'SL-14'
+      ]
     },
     {
       itemAltText: "Generator Image",
@@ -32,6 +51,11 @@ export const constants = {
       description:
         "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
       buttonText: "Know More",
+      information: [
+        'Reliability',
+        'Low Fuel Consumption',
+        'Fewer CO2 Emmisions',
+      ]
     },
     {
       itemAltText: "Gripper Image",
@@ -40,6 +64,11 @@ export const constants = {
       description:
         "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
       buttonText: "Know More",
+      information: [
+        'Compatiblity',
+        'Cost effective',
+        'Long Lasting',
+      ]
     },
     {
       itemAltText: "screw compressor Image",
@@ -48,6 +77,11 @@ export const constants = {
       description:
         "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
       buttonText: "Know More",
+      information: [
+        'Efficient',
+        'Low Power Consumption',
+        'Maintainability',
+      ]
     },
   ],
 };

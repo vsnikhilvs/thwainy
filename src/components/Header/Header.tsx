@@ -134,7 +134,7 @@ const Header = () => {
                         </Typography>
                         <Box
                             sx={{
-                                display: { xs: "none", sm: "flex" },
+                                display: { xs: "none", md: "flex" },
                                 gap: "1rem",
                             }}
                         >
@@ -156,7 +156,7 @@ const Header = () => {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ display: { sm: "none" } }}
+                            sx={{ display: { md: "none" } }}
                         >
                             <Menu />
                         </IconButton>
@@ -173,7 +173,7 @@ const Header = () => {
                             keepMounted: true, // Better open performance on mobile.
                         }}
                         sx={{
-                            display: { xs: "block", sm: "none" },
+                            display: { xs: "block", md: "none" },
                             "& .MuiDrawer-paper": {
                                 boxSizing: "border-box",
                                 width: '50%',
@@ -186,7 +186,7 @@ const Header = () => {
             </div>
             <Box
                 sx={{
-                    display: { xs: "none", sm: "flex" },
+                    display: { xs: "none", md: "flex" },
                 }}
             >    
                 <div className={styles.subContainer}>

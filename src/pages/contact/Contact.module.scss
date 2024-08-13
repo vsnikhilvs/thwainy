@@ -9,12 +9,14 @@
   .bannerImage {
     max-width: 1920px;
     height: 100%;
-    max-height: 15rem;
+    width: 100%;
+    min-height: 15rem;
+    object-fit: cover;
   }
 
   .content {
     background: white;
-    padding: 2rem 1rem;
+    padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -69,7 +71,7 @@
 
   .contactSection {
     background: #efefef;
-    padding: 2rem 1rem;
+    padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;

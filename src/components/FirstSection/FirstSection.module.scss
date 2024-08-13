@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 1rem;
 
   .wedge {
     position: absolute;
@@ -32,6 +32,7 @@
   .mainSection {
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-width: 5rem;
     max-width: 35rem;
     width: 100%;
@@ -63,6 +64,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       padding: 0 1rem;
     }
 
@@ -82,6 +84,7 @@
     .carouselContent {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 0.5rem;
       max-width: 25rem;
 
@@ -95,6 +98,25 @@
       .carouselDescription {
         @extend .carouseldescription;
         color: black;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        .carouselInfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .carouselInfoTitle {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .infoItem {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+        }
       }
     }
   }
@@ -102,6 +124,7 @@
 
 @include sm {
   .container {
+    gap: 3rem;
     .mainSection {
       gap: 1rem;
       padding: 0 1rem;
@@ -111,9 +134,11 @@
       }
     }
     .mainSectionRight {
+      margin-bottom: -4rem;
       .slickItem {
         padding: 0;
         flex-direction: row;
+        justify-content: center;
       }
       .imageSection {
         .carouselImage {
@@ -133,6 +158,7 @@
 
 @include md {
   .container {
+    gap: 1rem;
     .wedge {
       width: 2.5rem;
       height: auto;
@@ -145,6 +171,7 @@
       }
     }
     .mainSectionRight {
+      margin-bottom: -5rem;
       max-width: 45rem;
       .imageSection {
         .carouselImage {
@@ -174,11 +201,13 @@
     .mainSection {
       max-width: 20rem;
       gap: 1rem;
+      align-items: flex-start;
       .titleText {
         line-height: 34px;
       }
     }
     .mainSectionRight {
+      margin-bottom: 0;
       .imageSection {
         .carouselImage {
           width: 35rem;

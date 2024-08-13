@@ -1,5 +1,4 @@
 import Logo from "@/assets/Logo.svg";
-import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.scss";
 const Footer = () => {
@@ -7,7 +6,7 @@ const Footer = () => {
     <div className={styles.footerSection}>
       <div className={styles.smallRectangle}></div>
       <div className={styles.footerContent}>
-        <Image src={Logo} alt={"Logo"} className={styles.logo} />
+          <Image src={Logo} alt={"Logo"} className={styles.logo} />
         <div className={styles.addressSection}>
           <span className={styles.addressTitle}>Address</span>
           <span className={styles.addressDesc}>Thwainy Industries</span>
@@ -24,9 +23,10 @@ const Footer = () => {
             Tel : 00966 12 6140441 | 920015441
           </span>
           <span className={styles.addressDesc}>info@thwainy.com</span>
+          <span className={styles.addressDesc}>&nbsp;</span>
         </div>
       </div>
-      <div className={styles.menuContent}>© All rights reserved</div>
+      <div className={styles.menuContent}>© 2024 • Thwainy Industries • All rights reserved</div>
     </div>
   );
 };

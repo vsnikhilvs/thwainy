@@ -6,6 +6,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { constants } from "@/constants/firstSection/constants";
 import { carouselConfig } from "@/constants/carousel/constants";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import AddIcon from '@mui/icons-material/Add';
 
 const FirstSection = () => {
   return (
@@ -44,7 +46,18 @@ const FirstSection = () => {
               <div className={styles.carouselContent}>
                 <span className={styles.carouselTitle}>{c.title}</span>
                 <span className={styles.carouselDescription}>
-                  {c.description}
+                  <div className={styles.carouselInfo}>
+                    <div className={styles.carouselInfoTitle}>{'Information'}</div>
+                    {c.information?.map(i => (
+                      <span className={styles.infoItem} key={i}><CheckCircleIcon color="action" />{i}</span>
+                    ))}
+                  </div>
+                  {c.versions && <div className={styles.carouselInfo}>
+                    <div className={styles.carouselInfoTitle}>{'Versions'}</div>
+                    {c.versions?.map(i => (
+                      <span className={styles.infoItem} key={i}><AddIcon color="action" />{i}</span>
+                    ))}
+                  </div>}
                 </span>
                 <Button variant={"contained"} className={styles.brochureButton}>
                   {c.buttonText}

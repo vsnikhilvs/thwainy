@@ -3,7 +3,7 @@ import about2 from "@/assets/about2.png";
 import about3 from "@/assets/about3.png";
 
 export const constants = {
-  title: "Lorem ipsum dolor sitamet, tetuer adipiscing",
+  title: "About Us",
   subtitle: "Lorem ipsum dolor sit amet",
   features: [
     {

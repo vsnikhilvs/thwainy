@@ -29,7 +29,7 @@
         .addressTitle {
             @extend .carouseltitle;
             color: white;
-            font-size: 26px;
+            font-size: 22px;
         }
 
         .addressDesc {
@@ -53,6 +53,7 @@
     }
 
     .menuContent {
+        font-size: 10px;
         background: #182941;
         height: 20%;
         display: flex;
