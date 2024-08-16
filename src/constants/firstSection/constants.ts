@@ -22,9 +22,9 @@ export const constants = {
         'Low Area Footprint',
       ],
       versions: [
-        'SL-16',
-        'SL-18',
-        'SL-20'
+        'SC-16',
+        'SC-18',
+        'SC-20'
       ]
     },
     {

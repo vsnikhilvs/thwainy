@@ -55,17 +55,10 @@
   }
 
   .featureSection {
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    .normal {
-      flex-direction: row;
-    }
-
-    .reverse {
-      flex-direction: row-reverse;
-    }
 
     .feature {
       display: flex;
@@ -87,6 +80,14 @@
       }
     }
   }
+}
+
+.normal {
+  flex-direction: row;
+}
+
+.reverse {
+  flex-direction: row-reverse !important;
 }
 
 @include sm {

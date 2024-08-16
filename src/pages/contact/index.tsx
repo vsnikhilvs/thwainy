@@ -71,10 +71,10 @@ const Contact = () => {
               <div key={i} className={styles.personnal}>
                 <span className={styles.contactPersonnalTitle}>{p.title}</span>
                 <span className={styles.contactPersonnalDesc}>
-                  {p.email}
+                  <a href={`mailto:${p.email}`}>{p.email}</a>
                 </span>
                 <span className={styles.contactPersonnalDesc}>
-                  {p.phone}
+                  <a href={`tel:${p.phone}`}>{p.phone}</a>
                 </span>
               </div>
             ))}

@@ -12,12 +12,12 @@ export const constants = {
         {
             title: "Administration",
             email: "sara@thwainy.com",
-            phone: "+966 58 190 6350",
+            phone: "+966 55 559 4083",
         },
         {
             title: "Services",
             email: "abdulaziz@thwainy.com",
-            phone: "+966 58 190 6350",
+            phone: "+966 55 688 8211",
         },
         {
             title: "Sales",

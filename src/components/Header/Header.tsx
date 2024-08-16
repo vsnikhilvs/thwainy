@@ -19,10 +19,13 @@ import {
     PopperPlacementType,
     Toolbar,
     Typography,
+    ClickAwayListener,
+    Portal,
 } from "@mui/material";
 import React, { useEffect } from "react";
 import { Menu } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 const navItems = [
     { name: "Home", url: "/" },
@@ -34,6 +37,7 @@ const navItems = [
 
 const Header = () => {
     const pathname = usePathname();
+    const router = useRouter();
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
         null
     );
@@ -43,18 +47,25 @@ const Header = () => {
     const [container, setContainer] = React.useState<HTMLElement | undefined>(
         undefined
     );
+    const [popperOptions, setPopperOptions] = React.useState<string[]>([]);
     const handleDrawerToggle = (e: any) => {
-        if(e?.target?.textContent === 'Power'
-            || e?.target?.textContent === 'City Cleaning'
-            || e?.target?.textContent === 'Maintenance'
+        if (
+            e?.target?.textContent === "Power" ||
+            e?.target?.textContent === "City Cleaning" ||
+            e?.target?.textContent === "Maintenance"
         ) {
-            return
+            return;
         } else setMobileOpen((prevState) => !prevState);
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                <Image src={Logo} alt={"Logo"} className={styles.logoDrawer} />
+                <Image
+                    src={Logo}
+                    alt={"Logo"}
+                    className={styles.logoDrawer}
+                    onClick={() => router.push("/")}
+                />
             </Typography>
             <Divider />
             <List>
@@ -74,26 +85,38 @@ const Header = () => {
                         </ListItemButton>
                     </ListItem>
                 ))}
-                <Divider/>
-                <Divider/>
+                <Divider />
+                <Divider />
                 <ListItem disablePadding>
                     <ListItemButton sx={{ textAlign: "center" }}>
-                        <span className={styles.inActiveMenu + ' ' + styles.secondButtons}>
-                            {'Power'}
+                        <span
+                            className={
+                                styles.inActiveMenu + " " + styles.secondButtons
+                            }
+                        >
+                            {"Power"}
                         </span>
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton sx={{ textAlign: "center" }}>
-                        <span className={styles.inActiveMenu + ' ' + styles.secondButtons}>
-                            {'City Cleaning'}
+                        <span
+                            className={
+                                styles.inActiveMenu + " " + styles.secondButtons
+                            }
+                        >
+                            {"City Cleaning"}
                         </span>
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton sx={{ textAlign: "center" }}>
-                        <span className={styles.inActiveMenu + ' ' + styles.secondButtons}>
-                            {'Maintenance'}
+                        <span
+                            className={
+                                styles.inActiveMenu + " " + styles.secondButtons
+                            }
+                        >
+                            {"Maintenance"}
                         </span>
                     </ListItemButton>
                 </ListItem>
@@ -101,16 +124,52 @@ const Header = () => {
         </Box>
     );
     const handleClick =
-        (newPlacement: PopperPlacementType) =>
+        (newPlacement: PopperPlacementType, options: string[]) =>
         (event: React.MouseEvent<HTMLButtonElement>) => {
             setAnchorEl(event.currentTarget);
             setOpen((prev) => placement !== newPlacement || !prev);
             setPlacement(newPlacement);
+            setPopperOptions(options);
         };
+
+    const handleClickAway = () => {
+        setOpen(false);
+    };
+
+    const handlePopperClick = (option: string) => {
+        router.push({
+            pathname: "/products",
+            query: { currentTab: option },
+        });
+    };
 
     useEffect(() => {
         setContainer(window !== undefined ? window.document.body : undefined);
     }, []);
+
+    useEffect(() => {
+        const handleClick = (e: any) => {
+          if(
+            e.target?.innerText === 'Power' ||
+            e.target?.innerText === 'City Cleaning' ||
+            e.target?.innerText === 'Maintenance & Construction'
+          ) {
+            setOpen(true);
+          } else if(
+            e.target?.innerText !== 'Diesel Generator' ||
+            e.target?.innerText !== 'Stationary Screw Compressor' ||
+            e.target?.innerText !== 'Stationary Compactor' ||
+            e.target?.innerText !== 'Scissor Lift' ||
+            e.target?.innerText !== 'Gripper'
+          ) {
+            setOpen(false);
+          }
+        };
+        window.addEventListener('click', handleClick);
+        return () => {
+          window.removeEventListener('click', handleClick);
+        };
+      }, []);
 
     return (
         <>
@@ -130,6 +189,7 @@ const Header = () => {
                                 src={Logo}
                                 alt={"Logo"}
                                 className={styles.logo}
+                                onClick={() => router.push("/")}
                             />
                         </Typography>
                         <Box
@@ -176,7 +236,7 @@ const Header = () => {
                             display: { xs: "block", md: "none" },
                             "& .MuiDrawer-paper": {
                                 boxSizing: "border-box",
-                                width: '50%',
+                                width: "50%",
                             },
                         }}
                     >
@@ -188,31 +248,40 @@ const Header = () => {
                 sx={{
                     display: { xs: "none", md: "flex" },
                 }}
-            >    
+            >
                 <div className={styles.subContainer}>
                     <Button
                         variant="text"
                         className={styles.subMenuButton}
-                        onClick={handleClick("bottom")}
+                        onClick={handleClick("bottom", [
+                            "Diesel Generator",
+                            "Stationary Screw Compressor",
+                        ])}
                     >
                         Power
                     </Button>
                     <Button
                         variant="text"
                         className={styles.subMenuButton}
-                        onClick={handleClick("bottom")}
+                        onClick={handleClick("bottom", [
+                            "Stationary Compactor",
+                        ])}
                     >
                         City Cleaning
                     </Button>
                     <Button
                         variant="text"
                         className={styles.subMenuButton}
-                        onClick={handleClick("bottom")}
+                        onClick={handleClick("bottom", [
+                            "Scissor Lift",
+                            "Gripper",
+                        ])}
                     >
                         Maintenance & Construction
                     </Button>
                 </div>
             </Box>
+
             <Popper
                 sx={{ zIndex: 1200 }}
                 open={open}
@@ -223,24 +292,16 @@ const Header = () => {
                 {({ TransitionProps }) => (
                     <Fade {...TransitionProps} timeout={350}>
                         <div className={styles.popupButtons}>
-                            <Button
-                                variant="text"
-                                className={styles.subMenuPopupButton}
-                            >
-                                Diesel Generator
-                            </Button>
-                            <Button
-                                variant="text"
-                                className={styles.subMenuPopupButton}
-                            >
-                                Stationary Screw Compressor
-                            </Button>
-                            <Button
-                                variant="text"
-                                className={styles.subMenuPopupButton}
-                            >
-                                Portable Screw Compressor
-                            </Button>
+                            {popperOptions.map((option) => (
+                                <Button
+                                    key={option}
+                                    variant="text"
+                                    className={styles.subMenuPopupButton}
+                                    onClick={() => handlePopperClick(option)}
+                                >
+                                    {option}
+                                </Button>
+                            ))}
                         </div>
                     </Fade>
                 )}

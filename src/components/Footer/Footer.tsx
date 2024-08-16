@@ -1,12 +1,15 @@
 import Logo from "@/assets/Logo.svg";
 import Image from "next/image";
 import styles from "./Footer.module.scss";
+import { useRouter } from "next/router";
+
 const Footer = () => {
+  const router = useRouter();
   return (
     <div className={styles.footerSection}>
       <div className={styles.smallRectangle}></div>
       <div className={styles.footerContent}>
-          <Image src={Logo} alt={"Logo"} className={styles.logo} />
+          <Image src={Logo} alt={"Logo"} className={styles.logo} onClick={() => router.push("/")} />
         <div className={styles.addressSection}>
           <span className={styles.addressTitle}>Address</span>
           <span className={styles.addressDesc}>Thwainy Industries</span>
@@ -20,9 +23,9 @@ const Footer = () => {
         <div className={styles.contactSection}>
           <span className={styles.addressTitle}>Contact</span>
           <span className={styles.addressDesc}>
-            Tel : 00966 12 6140441 | 920015441
+            <a href="tel:00966126140441">Tel : 00966 12 6140441</a> | <a href="tel:920015441">920015441</a>
           </span>
-          <span className={styles.addressDesc}>info@thwainy.com</span>
+          <span className={styles.addressDesc}><a href="mailto:info@thwainy.com">info@thwainy.com</a></span>
           <span className={styles.addressDesc}>&nbsp;</span>
         </div>
       </div>

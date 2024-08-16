@@ -47,11 +47,12 @@
       display: flex;
       align-items: center;
       flex-direction: row;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 3rem;
 
       .carouselImage {
-        width: 50px;
+        width: auto;
         height: 50px;
       }
     }
@@ -90,7 +91,7 @@
         width: 40%;
         gap: 2rem;
         .carouselImage {
-          width: 75px;
+          width: auto;
           height: 75px;
         }
       }
@@ -111,7 +112,7 @@
         grid-row-gap: 0px;
 
         .carouselImage {
-          width: 100px;
+          width: auto;
           height: 100px;
         }
       }

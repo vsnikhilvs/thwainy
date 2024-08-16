@@ -3,13 +3,13 @@ import styles from "./ThirdSection.module.scss";
 import { Button } from "@mui/material";
 import mhm from "@/assets/mhm.png";
 import asad from "@/assets/asad.png";
-import asad1 from "@/assets/asad1.png";
-import r1 from "@/assets/r1.png";
-import holding from "@/assets/holding.png";
+import althinayyanhg from "@/assets/althinayyanhg.png";
+import ri from "@/assets/ri.png";
+import mw from "@/assets/mw.png";
 import cyan from "@/assets/cyan.png";
 import { constants } from "@/constants/thirdSection/constants";
 
-const images = [mhm, asad, asad1, r1, holding, cyan];
+const images = [mhm, asad, althinayyanhg, ri, mw, cyan];
 
 const ThirdSection = () => {
   return (

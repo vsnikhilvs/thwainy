@@ -4,13 +4,52 @@ import { constants } from "@/constants/products/constants";
 import {  useEffect, useState } from "react";
 import { Tabs, Tab, Button } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from 'next/router';
 
 const Products = () => {
+  const router = useRouter(); 
+  const { currentTab } = router.query;
   const [width, setWidth] = useState(0);
   const [tab, setTab] = useState(0);
+
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setTab(newValue);
   };
+
+  const handleDownloadBrochure = () => {
+    const link = document.createElement('a');
+    link.href = '/Sample.pdf';
+    link.download = 'Sample.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  useEffect(() => {
+    if (typeof currentTab === 'string') {
+      switch (currentTab) {
+        case 'Diesel Generator':
+          setTab(0);
+          break;
+        case 'Stationary Screw Compressor':
+          setTab(1);
+          break;
+        case 'Gripper':
+          setTab(2);
+          break;
+        case 'Scissor Lift':
+          setTab(3);
+          break;
+        case 'Stationary Compactor':
+          setTab(4);
+          break;
+        default:
+          setTab(0);
+          break;
+      }
+    }
+  }, [currentTab]);
+
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth)
@@ -21,6 +60,7 @@ const Products = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
   return (
     <Layout>
       <div className={styles.container}>
@@ -57,7 +97,7 @@ const Products = () => {
               <div className={styles.bannerLiterals}>
                 <span className={styles.bannerTitle}>{d.value.title}</span>
                 <span className={styles.bannerDesc}>{d.value.description}</span>
-                <Button variant="contained" className={styles.brochureButton}>
+                <Button variant="contained" className={styles.brochureButton} onClick={handleDownloadBrochure}>
                   Download Brochure
                 </Button>
               </div>
@@ -103,7 +143,7 @@ const Products = () => {
                   </tr>
                 ))}
               </table>
-              <Button variant="outlined" className={styles.brochureButton}>
+              <Button variant="outlined" className={styles.brochureButton} onClick={handleDownloadBrochure}>
                 Download Brochure
               </Button>
               </div>

@@ -8,8 +8,58 @@ import { constants } from "@/constants/firstSection/constants";
 import { carouselConfig } from "@/constants/carousel/constants";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import AddIcon from '@mui/icons-material/Add';
+import { useRouter } from 'next/router';
 
 const FirstSection = () => {
+  const router = useRouter();
+  const handleClick = (option: string) => {
+    switch (option) {
+      case 'Generators and Canopies':
+        router.push({
+          pathname: '/products',
+          query: { currentTab: 'Diesel Generator' }
+        });
+        break;
+      case 'Screw Compressor':
+        router.push({
+          pathname: '/products',
+          query: { currentTab: 'Stationary Screw Compressor' }
+        });
+        break;
+      case 'Gripper':
+        router.push({
+          pathname: '/products',
+          query: { currentTab: 'Gripper' }
+        });
+        break;
+      case 'Scissor Lift':
+        router.push({
+          pathname: '/products',
+          query: { currentTab: 'Scissor Lift' }
+        });
+        break;
+      case 'Compactor':
+        router.push({
+            pathname: '/products',
+            query: { currentTab: 'Stationary Compactor' }
+        });
+        break;
+      default:
+        router.push({
+          pathname: '/products',
+          query: { currentTab: option }
+        });
+        break;
+    }
+  }
+  const handleDownloadBrochure = () => {
+    const link = document.createElement('a');
+    link.href = '/Sample.pdf';
+    link.download = 'Sample.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   return (
     <div className={styles.container}>
       <Image src={Wedge} alt="Wedge image" className={styles.wedge} />
@@ -21,7 +71,7 @@ const FirstSection = () => {
           {constants.title.split(', ')[1]}
         </span>
         <span className={styles.descriptionText}>{constants.description}</span>
-        <Button variant={"contained"} className={styles.brochureButton}>
+        <Button variant={"contained"} className={styles.brochureButton} onClick={handleDownloadBrochure}>
           {constants.downloadBrochureButtonText}
         </Button>
       </div>
@@ -59,7 +109,7 @@ const FirstSection = () => {
                     ))}
                   </div>}
                 </span>
-                <Button variant={"contained"} className={styles.brochureButton}>
+                <Button variant={"contained"} className={styles.brochureButton} onClick={() => handleClick(c.title)}>
                   {c.buttonText}
                 </Button>
               </div>

@@ -72,7 +72,7 @@ export const constants = {
             value: 'THWAINY–EP–15kVA upto THWAINY–EP–600kVA',
           },
           {
-            item: 'Capacities (Continuous kVA)',
+            item: 'Capacities (Cont. kVA)',
             value: '15 – 20 – 25 – 35 – 45 – 50 – 60 – 75 – 100 – 125 – 150 – 200 – 300 – 400 – 500 – 600',
           },
           {
@@ -114,21 +114,21 @@ export const constants = {
         features: [
           {
             image: temp,
-            title: "Schools",
+            title: "Process Plants",
             description:
-              "Generator canopies guarantee uninterrupted power, noise reduction, extended generator lifespan, and a controlled environment for smooth school operations.",
+              "Favored for their ability to deliver a continuous supply of compressed air with high efficiency and low maintenance requirements.",
           },
           {
             image: insulation,
-            title: "Parks",
+            title: "Factories",
             description:
-              "Canopies protect generators used for lighting, water pumps, or park amenities, safeguarding them against weather conditions and minimizing noise pollution.",
+              "Favored for their efficiency, durability, and ability to operate under high demand, help maintain consistent production quality. A cost-effective choice for industrial applications",
           },
           {
             image: voltage,
-            title: "Restaurants",
+            title: "Oil Fields",
             description:
-              "In outdoor settings, generator canopies offer backup power, controlling engine overheating and shielding against rain and sunlight.",
+              "Robust design allows them to operate efficiently in harsh environments, delivering high-pressure air for powering pneumatic tools, maintaining pressure in pipelines, and enhancing oil extraction processes.",
           },
         ],
         specification: [
