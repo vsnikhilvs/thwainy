@@ -31,7 +31,7 @@ const navItems = [
     { name: "Home", url: "/" },
     { name: "About", url: "/about" },
     { name: "Products", url: "/products" },
-    { name: "News", url: "/news" },
+    // { name: "News", url: "/news" },
     { name: "Contact Us", url: "/contact" },
 ];
 

@@ -26,8 +26,6 @@ const About = () => {
                 (i % 2 !== 0 ? styles.reverse : styles.normal)
               }
             >
-              {i}
-              {i%2}
               <Image
                 src={f.image}
                 width={732}

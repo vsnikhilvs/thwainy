@@ -73,7 +73,7 @@ export const constants = {
     {
       itemAltText: "screw compressor Image",
       image: screwcompressor,
-      title: "Screw Compressor",
+      title: "Stationary Screw Compressor",
       description:
         "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
       buttonText: "Know More",

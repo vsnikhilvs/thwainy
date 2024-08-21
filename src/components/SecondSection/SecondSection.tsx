@@ -51,8 +51,8 @@ const SecondSection = () => {
     }
     const handleDownloadBrochure = () => {
         const link = document.createElement('a');
-        link.href = '/Sample.pdf';
-        link.download = 'Sample.pdf';
+        link.href = '/Main_Brochure.pdf';
+        link.download = 'Main_Brochure.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

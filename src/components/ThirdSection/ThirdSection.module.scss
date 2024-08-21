@@ -89,7 +89,7 @@
         padding-top: 2rem;
         flex-direction: column;
         width: 40%;
-        gap: 2rem;
+        gap: 1rem;
         .carouselImage {
           width: auto;
           height: 75px;
@@ -109,7 +109,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 0px;
-        grid-row-gap: 0px;
+        grid-row-gap: 1rem;
 
         .carouselImage {
           width: auto;

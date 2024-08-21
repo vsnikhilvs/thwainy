@@ -16,7 +16,7 @@ export const constants = {
     },
     {
       categoryId: "screwcompressor",
-      title: "Screw Compressor",
+      title: "Stationary Screw Compressor",
       icon: compressor_icon,
     },
     {
@@ -108,7 +108,7 @@ export const constants = {
       categoryId: "screwcompressor",
       value: {
         machineId: "SCID001",
-        title: "Screw Compressor",
+        title: "Stationary Screw Compressor",
         description:
           "With high-end designs, advanced features, and technologies that offer cost-effective, long-lasting, reliable, and premium compressed air solutions suitable for light to heavy-duty industrial applications",
         features: [
@@ -146,7 +146,7 @@ export const constants = {
           },
           {
             item: 'Flow rate',
-            value: '0.8 - 14.2 m3',
+            value: '0.8 - 14.2 m3/s',
           },
           {
             item: 'Power',
