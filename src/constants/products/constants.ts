@@ -1,6 +1,18 @@
-import temp from "@/assets/temp.svg";
-import insulation from "@/assets/insulation.svg";
-import voltage from "@/assets/voltage.svg";
+import factories from "@/assets/factories.svg";
+import maintainability_screw from "@/assets/maintainability_screw.svg";
+import process_plants from "@/assets/process_plants.svg";
+import co2_emissions from "@/assets/co2_emissions.svg";
+import compatibility from "@/assets/compatibility.svg";
+import low_fuel_consumption from "@/assets/low_fuel_consumption.svg";
+import maintainability_gripper from "@/assets/maintainability_gripper.svg";
+import reliability_0 from "@/assets/reliability_0.svg";
+import reliability_1 from "@/assets/reliability_1.svg";
+import heights from "@/assets/heights.svg";
+import ease from "@/assets/ease.svg";
+import customizable from "@/assets/customizable.svg";
+import cost from "@/assets/cost.svg";
+import env_benefits from "@/assets/env_benefits.svg";
+import waste_red from "@/assets/waste_red.svg";
 import canopy_icon from "@/assets/icons/CanopyIcon"
 import compactor_icon from "@/assets/icons/CompactorIcon"
 import compressor_icon from "@/assets/icons/CompressorIcon"
@@ -45,18 +57,18 @@ export const constants = {
           "Introducing our versatile generator solutions, available for both rental and sale, providing you with flexibility and convenience",
         features: [
           {
-            image: temp,
+            image: reliability_1,
             title: "Reliability",
             description:
               "It achieves 90 degrees at 40 degrees ambient conditions.",
           },
           {
-            image: insulation,
+            image: low_fuel_consumption,
             title: "Low Fuel Consumption",
             description: "Built with class H insulation for enhanced safety",
           },
           {
-            image: voltage,
+            image: co2_emissions,
             title: "Fewer CO2 Emmisions",
             description:
               "Maintains voltage within ±0.5% for stable power output.",
@@ -113,19 +125,19 @@ export const constants = {
           "With high-end designs, advanced features, and technologies that offer cost-effective, long-lasting, reliable, and premium compressed air solutions suitable for light to heavy-duty industrial applications",
         features: [
           {
-            image: temp,
+            image: process_plants,
             title: "Process Plants",
             description:
               "Favored for their ability to deliver a continuous supply of compressed air with high efficiency and low maintenance requirements.",
           },
           {
-            image: insulation,
+            image: factories,
             title: "Factories",
             description:
               "Favored for their efficiency, durability, and ability to operate under high demand, help maintain consistent production quality. A cost-effective choice for industrial applications",
           },
           {
-            image: voltage,
+            image: maintainability_screw,
             title: "Oil Fields",
             description:
               "Robust design allows them to operate efficiently in harsh environments, delivering high-pressure air for powering pneumatic tools, maintaining pressure in pipelines, and enhancing oil extraction processes.",
@@ -171,19 +183,19 @@ export const constants = {
           "The ultimate tool for handling blocks with ease. Its ergonomic design ensures a secure grip, reducing strain and increasing efficiency. Ideal for construction and landscaping. Thwainy industries' Block Gripper is durable, lightweight and versatile. Make your block-lifting tasks safer and faster with Thwainy Industries' Block Gripper",
         features: [
           {
-            image: temp,
+            image: reliability_0,
             title: "Reliability",
             description:
               "Designed to be highly reliable and robust",
           },
           {
-            image: insulation,
+            image: compatibility,
             title: "Compatibility",
             description:
               "Sturdy gripper systems suitable for handling a wide range of parts",
           },
           {
-            image: voltage,
+            image: maintainability_gripper,
             title: "Maintainability",
             description:
               "Easy to maintain, saving cost and time for the upcoming uses",
@@ -234,19 +246,19 @@ export const constants = {
           "Robust platforms offering great manoeuvrability and maximum versatility for working indoors and outdoors, on construction sites, for fitting out or carrying out maintenance work",
         features: [
           {
-            image: temp,
+            image: heights,
             title: "Access Heights",
             description:
               "Scissor lifts can go up to 32 feet in height, allows your workers to reach spots that would have otherwise been very hard to get to",
           },
           {
-            image: insulation,
+            image: ease,
             title: "Ease of Use",
             description:
               "Easy to operate, simple and literally foolproof, decreases the tiredness of operators",
           },
           {
-            image: voltage,
+            image: customizable,
             title: "Easily Customizable",
             description:
               "You can fit yours with tilters to minimize falling risk for the operator, fit it with a turntable that allows it to rotate in addition to lifting",
@@ -289,19 +301,19 @@ export const constants = {
           "Designed to be fixed waste management devices, our stationary compactors are ideal for handling dry waste like cardboard, paper, and other non-organic materials, making them a popular choice for retail outlets, manufacturing facilities, and offices.",
         features: [
           {
-            image: temp,
+            image: waste_red,
             title: "Waste volume reduction",
             description:
               "They can reduce the volume of waste by up to 75%, making waste management more efficient and less frequent",
           },
           {
-            image: insulation,
+            image: cost,
             title: "Cost-Effectiveness",
             description:
               "Reduced waste volume means fewer trips for disposal, which translates to lower hauling fees",
           },
           {
-            image: voltage,
+            image: env_benefits,
             title: "Environmental Benefits",
             description:
               "By minimizing waste volume, stationary compactors help reduce the carbon footprint associated with waste transport",

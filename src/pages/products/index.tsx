@@ -16,10 +16,34 @@ const Products = () => {
     setTab(newValue);
   };
 
-  const handleDownloadBrochure = () => {
+  const handleDownloadBrochure = (item: string) => {
     const link = document.createElement('a');
-    link.href = '/Main_Brochure.pdf';
-    link.download = 'Main_Brochure.pdf';
+    switch (item) {
+      case 'Generators':
+        link.href = '/Generator_Tech_Sheet.pdf';
+        link.download = 'Generator_Tech_Sheet.pdf';
+        break;
+      case 'Stationary Screw Compressor':
+        link.href = '/Compressor_Tech_Sheet.pdf';
+        link.download = 'Compressor_Tech_Sheet.pdf';
+        break;
+      case 'Gripper':
+        link.href = '/Gripper_Tech_Sheet.pdf';
+        link.download = 'Gripper_Tech_Sheet.pdf';
+        break;
+      case 'Electric Scissor Lift':
+        link.href = '/Lift_Tech_Sheet.pdf';
+        link.download = 'Lift_Tech_Sheet.pdf';
+        break;
+      case 'Stationary Compactor':
+        link.href = '/Compactor_Tech_Sheet.pdf';
+        link.download = 'Compactor_Tech_Sheet.pdf';
+        break;
+      default:
+        link.href = '/Generator_Tech_Sheet.pdf';
+        link.download = 'Generator_Tech_Sheet.pdf';
+        break;
+    }
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -110,7 +134,7 @@ const Products = () => {
                 <div className={styles.bannerLiterals}>
                   <span className={styles.bannerTitle}>{d.value.title}</span>
                   <span className={styles.bannerDesc}>{d.value.description}</span>
-                  <Button variant="contained" className={styles.brochureButton} onClick={handleDownloadBrochure}>
+                  <Button variant="contained" className={styles.brochureButton} onClick={() => handleDownloadBrochure(d.value.title)}>
                     Download Brochure
                   </Button>
                 </div>
@@ -158,7 +182,7 @@ const Products = () => {
                     </tr>
                   ))}
                 </table>
-                <Button variant="outlined" className={styles.brochureButton} onClick={handleDownloadBrochure}>
+                <Button variant="outlined" className={styles.brochureButton} onClick={() => handleDownloadBrochure(d.value.title)}>
                   Download Brochure
                 </Button>
                 </div>

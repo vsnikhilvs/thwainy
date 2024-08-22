@@ -49,10 +49,34 @@ const SecondSection = () => {
             break;
         }
     }
-    const handleDownloadBrochure = () => {
+    const handleDownloadBrochure = (item: string) => {
         const link = document.createElement('a');
-        link.href = '/Main_Brochure.pdf';
-        link.download = 'Main_Brochure.pdf';
+        switch (item) {
+            case 'Generator':
+              link.href = '/Generator_Tech_Sheet.pdf';
+              link.download = 'Generator_Tech_Sheet.pdf';
+              break;
+            case 'Screw Compressor':
+              link.href = '/Compressor_Tech_Sheet.pdf';
+              link.download = 'Compressor_Tech_Sheet.pdf';
+              break;
+            case 'Gripper':
+              link.href = '/Gripper_Tech_Sheet.pdf';
+              link.download = 'Gripper_Tech_Sheet.pdf';
+              break;
+            case 'Scissor Lift':
+              link.href = '/Lift_Tech_Sheet.pdf';
+              link.download = 'Lift_Tech_Sheet.pdf';
+              break;
+            case 'Compactor':
+              link.href = '/Compactor_Tech_Sheet.pdf';
+              link.download = 'Compactor_Tech_Sheet.pdf';
+              break;
+            default:
+              link.href = '/Generator_Tech_Sheet.pdf';
+              link.download = 'Generator_Tech_Sheet.pdf';
+              break;
+          }
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -94,7 +118,7 @@ const SecondSection = () => {
                                 <Button
                                     variant="outlined"
                                     className={styles.downloadButton}
-                                    onClick={handleDownloadBrochure}
+                                    onClick={() => handleDownloadBrochure('c.title')}
                                 >
                                     {constants.downloadBrochureText}
                                 </Button>
