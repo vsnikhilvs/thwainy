@@ -200,6 +200,7 @@ const Header = () => {
                         >
                             {navItems.map((item) => (
                                 <Link
+                                key={item.name}
                                     href={item.url}
                                     className={
                                         pathname === item.url
