@@ -62,7 +62,6 @@
 
     .feature {
       display: flex;
-      flex-direction: column;
       align-items: center;
       gap: 1rem;
       object-fit: cover;
@@ -82,14 +81,6 @@
   }
 }
 
-.normal {
-  flex-direction: row;
-}
-
-.reverse {
-  flex-direction: row-reverse !important;
-}
-
 @include sm {
   .container {
     .main {
@@ -102,7 +93,6 @@
     .featureSection {
       gap: 2rem;
       .feature {
-        flex-direction: row;
         justify-content: space-evenly;
         gap: 2rem;
         .carouselImage {
