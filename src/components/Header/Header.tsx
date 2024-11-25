@@ -19,11 +19,10 @@ import {
     PopperPlacementType,
     Toolbar,
     Typography,
-    ClickAwayListener,
-    Portal,
+    Collapse,
 } from "@mui/material";
 import React, { useEffect } from "react";
-import { Menu } from "@mui/icons-material";
+import { ExpandLess, ExpandMore, Menu } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 
@@ -42,6 +41,9 @@ const Header = () => {
         null
     );
     const [open, setOpen] = React.useState(false);
+    const [openPower, setOpenPower] = React.useState(false);
+    const [openCityCleaning, setOpenCityCleaning] = React.useState(false);
+    const [openMaintanence, setOpenMaintanence] = React.useState(false);
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [placement, setPlacement] = React.useState<PopperPlacementType>();
     const [container, setContainer] = React.useState<HTMLElement | undefined>(
@@ -52,10 +54,19 @@ const Header = () => {
         if (
             e?.target?.textContent === "Power" ||
             e?.target?.textContent === "City Cleaning" ||
-            e?.target?.textContent === "Maintenance"
+            e?.target?.textContent === "Maintenance & Construction"
         ) {
             return;
         } else setMobileOpen((prevState) => !prevState);
+    };
+    const handleOpenPower = () => {
+        setOpenPower(!openPower);
+    };
+    const handleOpenCityCleaning = () => {
+        setOpenCityCleaning(!openCityCleaning);
+    };
+    const handleOpenMaintanence = () => {
+        setOpenMaintanence(!openMaintanence);
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -87,39 +98,147 @@ const Header = () => {
                 ))}
                 <Divider />
                 <Divider />
-                <ListItem disablePadding>
-                    <ListItemButton sx={{ textAlign: "center" }}>
-                        <span
-                            className={
-                                styles.inActiveMenu + " " + styles.secondButtons
-                            }
+                <ListItemButton onClick={handleOpenPower}>
+                    <span
+                        className={
+                            styles.inActiveMenu + " " + styles.secondButtons
+                        }
+                    >
+                        {"Power"}
+                    </span>
+                    {openPower ? (
+                        <ExpandLess sx={{ color: "white" }} />
+                    ) : (
+                        <ExpandMore sx={{ color: "white" }} />
+                    )}
+                </ListItemButton>
+                <Collapse in={openPower} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        <ListItemButton
+                            sx={{
+                                pl: 4,
+                                flexDirection: "column",
+                                alignItems: "flex-start",
+                                gap: 1,
+                            }}
                         >
-                            {"Power"}
-                        </span>
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton sx={{ textAlign: "center" }}>
-                        <span
-                            className={
-                                styles.inActiveMenu + " " + styles.secondButtons
-                            }
+                            <div
+                                className={
+                                    styles.inActiveMenu +
+                                    " " +
+                                    styles.secondButtons
+                                }
+                                onClick={() =>
+                                    handlePopperClick("Diesel Generator")
+                                }
+                            >
+                                {"Diesel Generator"}
+                            </div>
+                            <div
+                                className={
+                                    styles.inActiveMenu +
+                                    " " +
+                                    styles.secondButtons
+                                }
+                                onClick={() =>
+                                    handlePopperClick(
+                                        "Stationary Screw Compressor"
+                                    )
+                                }
+                            >
+                                {"Stationary Screw Compressor"}
+                            </div>
+                        </ListItemButton>
+                    </List>
+                </Collapse>
+                <ListItemButton onClick={handleOpenCityCleaning}>
+                    <span
+                        className={
+                            styles.inActiveMenu + " " + styles.secondButtons
+                        }
+                    >
+                        {"City Cleaning"}
+                    </span>
+                    {openCityCleaning ? (
+                        <ExpandLess sx={{ color: "white" }} />
+                    ) : (
+                        <ExpandMore sx={{ color: "white" }} />
+                    )}
+                </ListItemButton>
+                <Collapse in={openCityCleaning} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        <ListItemButton
+                            sx={{
+                                pl: 4,
+                                flexDirection: "column",
+                                alignItems: "flex-start",
+                                gap: 1,
+                            }}
                         >
-                            {"City Cleaning"}
-                        </span>
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton sx={{ textAlign: "center" }}>
-                        <span
-                            className={
-                                styles.inActiveMenu + " " + styles.secondButtons
-                            }
+                            <div
+                                className={
+                                    styles.inActiveMenu +
+                                    " " +
+                                    styles.secondButtons
+                                }
+                                onClick={() =>
+                                    handlePopperClick("Stationary Compactor")
+                                }
+                            >
+                                {"Stationary Compactor"}
+                            </div>
+                        </ListItemButton>
+                    </List>
+                </Collapse>
+                <ListItemButton onClick={handleOpenMaintanence}>
+                    <span
+                        className={
+                            styles.inActiveMenu + " " + styles.secondButtons
+                        }
+                    >
+                        {"Maintenance & Construction"}
+                    </span>
+                    {openMaintanence ? (
+                        <ExpandLess sx={{ color: "white" }} />
+                    ) : (
+                        <ExpandMore sx={{ color: "white" }} />
+                    )}
+                </ListItemButton>
+                <Collapse in={openMaintanence} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding>
+                        <ListItemButton
+                            sx={{
+                                pl: 4,
+                                flexDirection: "column",
+                                alignItems: "flex-start",
+                                gap: 1,
+                            }}
                         >
-                            {"Maintenance"}
-                        </span>
-                    </ListItemButton>
-                </ListItem>
+                            <div
+                                className={
+                                    styles.inActiveMenu +
+                                    " " +
+                                    styles.secondButtons
+                                }
+                                onClick={() =>
+                                    handlePopperClick("Scissor Lift")
+                                }
+                            >
+                                {"Scissor Lift"}
+                            </div>
+                            <div
+                                className={
+                                    styles.inActiveMenu +
+                                    " " +
+                                    styles.secondButtons
+                                }
+                                onClick={() => handlePopperClick("Gripper")}
+                            >
+                                {"Gripper"}
+                            </div>
+                        </ListItemButton>
+                    </List>
+                </Collapse>
             </List>
         </Box>
     );
@@ -131,10 +250,6 @@ const Header = () => {
             setPlacement(newPlacement);
             setPopperOptions(options);
         };
-
-    const handleClickAway = () => {
-        setOpen(false);
-    };
 
     const handlePopperClick = (option: string) => {
         router.push({
@@ -149,27 +264,27 @@ const Header = () => {
 
     useEffect(() => {
         const handleClick = (e: any) => {
-          if(
-            e.target?.innerText === 'Power' ||
-            e.target?.innerText === 'City Cleaning' ||
-            e.target?.innerText === 'Maintenance & Construction'
-          ) {
-            setOpen(true);
-          } else if(
-            e.target?.innerText !== 'Diesel Generator' ||
-            e.target?.innerText !== 'Stationary Screw Compressor' ||
-            e.target?.innerText !== 'Stationary Compactor' ||
-            e.target?.innerText !== 'Scissor Lift' ||
-            e.target?.innerText !== 'Gripper'
-          ) {
-            setOpen(false);
-          }
+            if (
+                e.target?.innerText === "Power" ||
+                e.target?.innerText === "City Cleaning" ||
+                e.target?.innerText === "Maintenance & Construction"
+            ) {
+                setOpen(true);
+            } else if (
+                e.target?.innerText !== "Diesel Generator" ||
+                e.target?.innerText !== "Stationary Screw Compressor" ||
+                e.target?.innerText !== "Stationary Compactor" ||
+                e.target?.innerText !== "Scissor Lift" ||
+                e.target?.innerText !== "Gripper"
+            ) {
+                setOpen(false);
+            }
         };
-        window.addEventListener('click', handleClick);
+        window.addEventListener("click", handleClick);
         return () => {
-          window.removeEventListener('click', handleClick);
+            window.removeEventListener("click", handleClick);
         };
-      }, []);
+    }, []);
 
     return (
         <>
@@ -200,7 +315,7 @@ const Header = () => {
                         >
                             {navItems.map((item) => (
                                 <Link
-                                key={item.name}
+                                    key={item.name}
                                     href={item.url}
                                     className={
                                         pathname === item.url
